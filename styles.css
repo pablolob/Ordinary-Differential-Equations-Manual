@@ -1,0 +1,344 @@
+/* TODO: probar esta configuracion */
+
+/* 3) Ancho del contenido */
+/* #quarto-content,
+#quarto-document-content{
+  max-width: 980px;
+}
+@media (min-width: 1400px){
+  #quarto-content,
+  #quarto-document-content{
+    max-width: 1050px;
+  }
+} */
+
+/* Estilizar el footer con la firma */
+.page-footer {
+  border-top: 1px solid #dee2e6;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Marca de agua sutil en la esquina superior derecha de cada página */
+.page-columns::before {
+  content: "Pablo Lobato de la Cruz\A Ecuaciones Diferenciales 2025";
+  white-space: pre; /* ← esto hace que \A se muestre como salto de línea */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* -------------------------------------- */
+/*              CALLOUTS                  */
+/* -------------------------------------- */
+
+/* Fondo gris muy claro uniforme + borde de color */
+.callout {
+  background-color: #FAFBFC;
+  border-left-width: 3px !important;
+  border-radius: 8px;
+  padding: 1rem .65rem;
+  margin: 0.5rem 0;
+}
+
+.callout-important {
+  border-left-color: #de4444; /* Rojo vino oscuro */
+  /* background-color: #f97b7b !important; */
+  /* color: white !important; */
+}
+
+.callout-warning {
+  border-left-color: #5D6D7E; /* Gris azulado */
+}
+
+.callout-tip {
+  border-left-color: #1E7A46; /* Verde oscuro */
+}
+
+.callout-note {
+  border-left-color: #2E5C8A; /* Azul oscuro */
+} 
+
+/* Título del callout */
+.callout-title {
+  font-weight: 600 !important;
+  margin-bottom: 3.5rem;
+}
+
+/* -------------------------------------- */
+/*              Justificado               */
+/* -------------------------------------- */
+
+/* Justificar el texto del contenido principal */
+#quarto-document-content p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+/* Alternativa más general */
+.content p,
+main p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Mantener títulos alineados a la izquierda */
+h1, h2, h3, h4, h5, h6 {
+  text-align: left !important;
+}
+
+/* -------------------------------------- */
+/*              Fonts               */
+/* -------------------------------------- */
+
+body {
+  font-size: 0.88rem;     /* tamaño base */
+  /* line-height: 1.5;      menos espaciado */
+}
+
+/* -------------------------------------- */
+/*              Secciones                */
+/* -------------------------------------- */
+
+section {
+  /* margin-top: 1.1em; */
+  /* margin-bottom: 3em; */
+}
+
+h2 {
+  /* margin-top: 3em; */
+  /* margin-bottom: 1.2em; */
+  /* font-size: 1.8em; */
+}
+
+h3 {
+  /* font-weight: bold; */
+  /* margin-top: 2em; */
+  /* margin-bottom: 1em; */
+  /* font-size: 1.4em; */
+  /* color: #2c3e50; */
+}
+h4 {
+  font-weight: bold;
+  /* margin-top: 1.5em; */
+  /* margin-bottom: 0.8em; */
+  /* font-size: 1.2em; */
+  /* color: #34495e; */
+}
+
+/* -------------------------------------- */
+/*              Math envs                */
+/* -------------------------------------- */
+
+/* Teoremas y Definiciones: fondo muy sutil */
+div.theorem,
+div.lemma,
+div.corollary,
+div.proposition,
+div.conjecture,
+div.definition,
+div.exercise,
+div.remark {
+  /* margin-left: 3 em; */
+  /* background-color: #fafbfc */
+  /* padding: 0.6em 1em 0.6em 1.5em; */
+  /* arriba, dcha, abajo, izda */
+  /* margin: 2em 0; */
+  margin: 0em 0 0em .85em; /* arriba, dcha, abajo, izda */
+  border-radius: 1px;
+  border-left: 3px solid #dfe8f4;
+  padding-left: 0.6em;
+}
+
+div.definition {
+  border-left-color: #dff4e0; /* verde */
+}
+
+div.exercise,
+div.remark {
+  border-left-color: #f7d3d3; /* rojo */
+}
+
+div.proof:not(.remark),
+div.example,
+div.solution,
+/* div.proposition, */
+div.algorithm {
+  margin: 0;            /* elimina la indentación */
+  border: none;         /* quita la línea izquierda */
+  padding-left: 0;      /* restablece el padding */
+}
+
+/* -------------------------------------- */
+/*              Estilo callout                */
+/* -------------------------------------- */
+
+/* Callout style de los bloques de matematicas */
+
+
+div.proof details,
+div.example details,
+div.conjecture details,
+div.solution details,
+div.remark details {
+  border: 1px solid #dfe8f4;
+  border-left: 4px solid #0d6efd; /* azul por defecto */
+  border-radius: 8px;
+  border-left-width: 1px !important;
+  overflow: hidden;
+  background-color: #FAFBFC;
+  padding: 1rem .65rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* === Título (summary) === */
+div.proof summary,
+div.example summary,
+div.conjecture summary,
+div.solution summary,
+div.remark summary {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #49525a; 
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.65em 1em;
+  line-height: 1.3;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Fondo específico para proof (azul) */
+/* div.proof summary {
+  background-color: #E6EFF9;
+} */
+
+/* Fondo específico para example, conjecture, solution (naranja claro) */
+/* div.example summary,
+div.conjecture summary,
+div.solution summary {
+  background-color: #fff8f2;
+} */
+
+div.proof details {
+  border-left-color: #2f81fc; /* azul */
+  background-color: #FAFBFC;
+  border: 0px solid #dfe8f4;
+}
+
+/* Colores de entorno particular */
+div.example details,
+div.conjecture details,
+div.solution details {
+  border-left-color: #f3a845; /* amarillo */
+  /* border-left-color: #dfe8f4; */
+  background-color: #FAFBFC;
+}
+
+div.remark details {
+  border: 1px solid #f7d3d3;
+  border-left-color: #f7d3d3; /* rojo como exercise */
+  background-color: #FAFBFC;
+}
+
+/* ------------------ Icono --------------------- */
+
+div.example summary::before {
+  content: "✏️"; /* 🔥 Aquí el cono de tráfico */
+  /* color: #f4a63d; */
+}
+
+div.proof summary::before {
+  content: ""; /* 🔥 Aquí el cono de tráfico */
+  color: #f4a63d;
+}
+
+div.solution summary::before {
+  content: "✏️"; 
+}
+
+/* === Animaciones y comportamiento === */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Oculta el triángulo por defecto */
+/* === Flecha SVG estilo Quarto (alineada al extremo derecho, tamaño correcto) === */
+
+/* Ocultar marcador por defecto */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::marker {
+  content: "";
+}
+
+/* Asegura que summary actúe como contenedor para posicionar la flecha */
+details summary {
+  position: relative;
+  padding-right: 2em; /* espacio para la flecha */
+}
+
+/* Flecha SVG posicionada absolutamente */
+details summary::after {
+  content: "";
+  position: absolute;
+  right: 0.75em;   /* separada del borde derecho */
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  transform: translateY(-50%) rotate(0deg);
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%2349525a' stroke-width='2.8' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path stroke-linecap='round' stroke-linejoin='round' d='M9 5l7 7-7 7'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+  opacity: 0.8;
+}
+
+/* Cuando está abierto */
+details[open] summary::after {
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 1;
+}
+
+
+
+/* -------------------------------------- */
+/*              menu lateral                */
+/* -------------------------------------- */
+
+/* Ajustar el ancho del panel lateral del libro */
+/* #quarto-sidebar { */
+/* width: 300px;  */
+/* left: -150px; */
+/* margin-left: -50px; */
+/* } */
+
+/* -------------------------------------- */
+/*              zoom                      */
+/* -------------------------------------- */
+
+@media (min-width: 1200px){
+  html { zoom: 0.7; }
+}
