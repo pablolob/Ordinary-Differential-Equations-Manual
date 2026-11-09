@@ -66,6 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../qmds/farmaco_dosis_repetidas.html" rel="next">
 <link href="../qmds/tambor.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -204,6 +205,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../qmds/02-metodos-elementales-resolucion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Métodos elementales de resolución de ecuaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../qmds/modelos_poblacionales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Modelos poblacionales</span></a>
   </div>
 </li>
@@ -220,6 +226,12 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../qmds/visualizador-plano-fases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Planos de fases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -265,6 +277,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../qmds/neurona.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Modelo de Neurona Integrate-Fire-Leakage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/farmaco_dosis_repetidas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dosis repetidas de un fármaco: una EDO con impulsos</span></a>
   </div>
 </li>
       </ul>
@@ -336,7 +353,7 @@ window.Quarto = {
 <p>La ecuación diferencial del potencial de membrana <span class="math inline">\(u(t)\)</span> es:</p>
 <p><span id="eq-neurona-ifl"><span class="math display">\[
 \boxed{\tau_m \frac{\mathrm{d}u}{\mathrm{d}t} = -[u(t) - u_{\text{rest}}] + RI(t)}
-\tag{10.1}\]</span></span></p>
+\tag{11.1}\]</span></span></p>
 <p>donde <span class="math inline">\(\tau_m = RC\)</span> es la constante de tiempo de la membrana, <span class="math inline">\(u_{\text{rest}}\)</span> es el potencial de reposo, e <span class="math inline">\(I(t)\)</span> es la corriente de entrada. Cuando <span class="math inline">\(u(t)\)</span> alcanza un umbral <span class="math inline">\(u_{\text{fire}}\)</span>, la neurona “dispara” un potencial de acción y se reinicia.</p>
 </section>
 <section id="caso-homogéneo-neurona-sin-estimulación-externa" class="level2">
@@ -344,10 +361,10 @@ window.Quarto = {
 <p>Consideremos primero el caso en que no hay corriente externa aplicada, es decir, <span class="math inline">\(I(t) = 0\)</span>. La ecuación se reduce a:</p>
 <p><span id="eq-neurona-homogenea"><span class="math display">\[
 \tau_m \frac{\mathrm{d}u}{\mathrm{d}t} = -[u(t) - u_{\text{rest}}]
-\tag{10.2}\]</span></span></p>
+\tag{11.2}\]</span></span></p>
 <p>Esta es la ecuación que describe el comportamiento de “fuga” (<strong>leaky</strong>) de la neurona: sin estimulación externa, el potencial de membrana tiende a regresar exponencialmente hacia su valor de reposo <span class="math inline">\(u_{\text{rest}}\)</span>.</p>
 <div id="exr-neurona-homogenea" class="theorem exercise" data-title="Solución de la ecuación homogénea">
-<p><span class="theorem-title"><strong>Ejercicio 10.1</strong></span> Resolver la ecuación <a href="#eq-neurona-homogenea" class="quarto-xref">Ecuación&nbsp;<span>10.2</span></a> mediante dos métodos diferentes:</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.1</strong></span> Resolver la ecuación <a href="#eq-neurona-homogenea" class="quarto-xref">Ecuación&nbsp;<span>11.2</span></a> mediante dos métodos diferentes:</p>
 <ol type="1">
 <li><strong>Método estándar</strong></li>
 <li><strong>Transformada de Laplace</strong> Considerar la condición inicial <span class="math inline">\(u(0) = u_0\)</span>. Estudiar el comportamiento asintótico de la solución. ¿Se parece a algún modelo visto en clase? ¿Qué comportamiento tiene la neurona?</li>
@@ -372,7 +389,7 @@ u(t) - u_{\text{rest}} &amp;= C e^{-t/\tau_m}
 <p>Imponiendo la condición inicial <span class="math inline">\(u(0) = u_0\)</span>, se obtiene <span class="math inline">\(C = u_0 - u_{\text{rest}}\)</span>. Por tanto:</p>
 <p><span id="eq-sol-homogenea"><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m}}
-\tag{10.3}\]</span></span></p>
+\tag{11.3}\]</span></span></p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por transformada de Laplace">
 <p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación. Sea <span class="math inline">\(U(s) = \mathcal{L}\{u(t)\}\)</span>:</p>
@@ -422,20 +439,20 @@ u(t) = u_0 e^{-t/\tau_m} + u_{\text{rest}}(1 - e^{-t/\tau_m})
 <p><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m}}
 \]</span></p>
-<p>que coincide con la solución obtenida por el método estándar <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>10.3</span></a>.</p>
+<p>que coincide con la solución obtenida por el método estándar <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>11.3</span></a>.</p>
 </div>
-<p><strong>Interpretación física</strong>: La solución <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>10.3</span></a> muestra que si la neurona parte de un potencial inicial <span class="math inline">\(u_0 \neq u_{\text{rest}}\)</span>, el potencial de membrana decae exponencialmente hacia el valor de reposo <span class="math inline">\(u_{\text{rest}}\)</span> con una constante de tiempo <span class="math inline">\(\tau_m = RC\)</span>. Este es el efecto de <strong>leakage</strong> (fuga) que da nombre al modelo.</p>
+<p><strong>Interpretación física</strong>: La solución <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>11.3</span></a> muestra que si la neurona parte de un potencial inicial <span class="math inline">\(u_0 \neq u_{\text{rest}}\)</span>, el potencial de membrana decae exponencialmente hacia el valor de reposo <span class="math inline">\(u_{\text{rest}}\)</span> con una constante de tiempo <span class="math inline">\(\tau_m = RC\)</span>. Este es el efecto de <strong>leakage</strong> (fuga) que da nombre al modelo.</p>
 </div>
 </section>
 <section id="caso-no-homogéneo-corriente-constante" class="level2">
 <h2 class="anchored" data-anchor-id="caso-no-homogéneo-corriente-constante">Caso no homogéneo: corriente constante</h2>
-<p>Consideremos ahora el caso en que se aplica una corriente externa constante <span class="math inline">\(I(t) = I_0\)</span>. La ecuación <a href="#eq-neurona-ifl" class="quarto-xref">Ecuación&nbsp;<span>10.1</span></a> se convierte en:</p>
+<p>Consideremos ahora el caso en que se aplica una corriente externa constante <span class="math inline">\(I(t) = I_0\)</span>. La ecuación <a href="#eq-neurona-ifl" class="quarto-xref">Ecuación&nbsp;<span>11.1</span></a> se convierte en:</p>
 <p><span id="eq-neurona-corriente-constante"><span class="math display">\[
 \tau_m \frac{\mathrm{d}u}{\mathrm{d}t} = -[u(t) - u_{\text{rest}}] + RI_0
-\tag{10.4}\]</span></span></p>
+\tag{11.4}\]</span></span></p>
 <p>Esta ecuación describe cómo responde la neurona a una estimulación eléctrica constante, que es un caso fundamental en neurofisiología.</p>
 <div id="exr-neurona-corriente-constante" class="theorem exercise" data-title="Neurona con corriente constante">
-<p><span class="theorem-title"><strong>Ejercicio 10.2</strong></span> Resolver la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.4</span></a> mediante dos métodos:</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.2</strong></span> Resolver la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.4</span></a> mediante dos métodos:</p>
 <ol type="1">
 <li><strong>Método estandar</strong></li>
 <li><strong>Transformada de Laplace</strong></li>
@@ -444,13 +461,13 @@ u(t) = u_0 e^{-t/\tau_m} + u_{\text{rest}}(1 - e^{-t/\tau_m})
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por el método estandar">
 <p><span class="proof-title"><em>Solución</em>. </span><strong>Paso 1: Solución homogénea</strong></p>
-<p>La solución de la ecuación homogénea asociada ya fue obtenida en <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>10.3</span></a>:</p>
+<p>La solución de la ecuación homogénea asociada ya fue obtenida en <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>11.3</span></a>:</p>
 <p><span class="math display">\[
 u_h(t) = C e^{-t/\tau_m}
 \]</span></p>
 <p><strong>Paso 2: Solución particular por coeficientes indeterminados</strong></p>
 <p>Se busca una solución particular de la forma <span class="math inline">\(u_p(t) = K\)</span> (constante), ya que el término no homogéneo es constante.</p>
-<p>Sustituyendo en la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.4</span></a>:</p>
+<p>Sustituyendo en la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.4</span></a>:</p>
 <p><span class="math display">\[
 \tau_m \cdot 0 = -[K - u_{\text{rest}}] + RI_0
 \]</span></p>
@@ -481,10 +498,10 @@ C = u_0 - u_{\text{rest}} - RI_0
 <p>Por tanto, la solución completa es:</p>
 <p><span id="eq-sol-corriente-constante"><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + RI_0 + (u_0 - u_{\text{rest}} - RI_0) e^{-t/\tau_m}}
-\tag{10.5}\]</span></span></p>
+\tag{11.5}\]</span></span></p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por transformada de Laplace">
-<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.4</span></a>. Sea <span class="math inline">\(U(s) = \mathcal{L}\{u(t)\}\)</span>:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.4</span></a>. Sea <span class="math inline">\(U(s) = \mathcal{L}\{u(t)\}\)</span>:</p>
 <p><span class="math display">\[
 \tau_m [sU(s) - u_0] = -[U(s) - \frac{u_{\text{rest}}}{s}] + \frac{RI_0}{s}
 \]</span></p>
@@ -536,10 +553,10 @@ u(t) = u_0 e^{-t/\tau_m} + (u_{\text{rest}} + RI_0) - (u_{\text{rest}} + RI_0) e
 <p><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + RI_0 + (u_0 - u_{\text{rest}} - RI_0) e^{-t/\tau_m}}
 \]</span></p>
-<p>que coincide con la solución obtenida por el método estandar <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.5</span></a>.</p>
+<p>que coincide con la solución obtenida por el método estandar <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.5</span></a>.</p>
 </div>
 <p><strong>Interpretación física</strong>:</p>
-<p>La solución <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.5</span></a> muestra que:</p>
+<p>La solución <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.5</span></a> muestra que:</p>
 <ol type="1">
 <li><p><strong>Estado transitorio</strong>: El término exponencial <span class="math inline">\((u_0 - u_{\text{rest}} - RI_0) e^{-t/\tau_m}\)</span> decae con constante de tiempo <span class="math inline">\(\tau_m\)</span>.</p></li>
 <li><p><strong>Estado estacionario</strong>: Cuando <span class="math inline">\(t \to \infty\)</span>, la solución converge a: <span class="math display">\[
@@ -554,10 +571,10 @@ u_{\infty} = u_{\text{rest}} + RI_0
 <p>Consideremos ahora el caso más general donde la corriente de entrada es una función arbitraria del tiempo <span class="math inline">\(I(t)\)</span>. La ecuación del potencial es:</p>
 <p><span id="eq-neurona-general"><span class="math display">\[
 \tau_m \frac{\mathrm{d}u}{\mathrm{d}t} + u(t) = u_{\text{rest}} + RI(t)
-\tag{10.6}\]</span></span></p>
+\tag{11.6}\]</span></span></p>
 <p>Esta ecuación diferencial lineal de primer orden describe la respuesta de la neurona a cualquier patrón temporal de estimulación.</p>
 <div id="exr-neurona-general" class="theorem exercise" data-title="Neurona con corriente variable">
-<p><span class="theorem-title"><strong>Ejercicio 10.3</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>10.6</span></a> mediante dos métodos:</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.3</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>11.6</span></a> mediante dos métodos:</p>
 <ol type="1">
 <li><strong>Método estandar</strong></li>
 <li><strong>Transformada de Laplace</strong></li>
@@ -569,7 +586,7 @@ u_{\infty} = u_{\text{rest}} + RI_0
 <p><span class="math display">\[
 u_h(t) = C e^{-t/\tau_m}
 \]</span></p>
-<p>Del caso anterior con corriente constante <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.5</span></a>, se tiene que la solución completa tiene la forma:</p>
+<p>Del caso anterior con corriente constante <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.5</span></a>, se tiene que la solución completa tiene la forma:</p>
 <p><span class="math display">\[
 u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + u_p(t)
 \]</span></p>
@@ -614,11 +631,11 @@ u_p(t) = \frac{R}{\tau_m} \int_0^t I(s) e^{-(t-s)/\tau_m} \mathrm{d}s
 <p>Combinando la solución homogénea con condición inicial y la solución particular:</p>
 <p><span id="eq-sol-general-convolucion"><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + \frac{R}{\tau_m} \int_0^t I(s) e^{-(t-s)/\tau_m} \mathrm{d}s}
-\tag{10.7}\]</span></span></p>
+\tag{11.7}\]</span></span></p>
 <p>donde el último término es una <strong>convolución</strong> que representa la respuesta de la neurona a toda la historia de estimulación.</p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por transformada de Laplace">
-<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>10.6</span></a>. Reescribiendo primero en forma estándar:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>11.6</span></a>. Reescribiendo primero en forma estándar:</p>
 <p><span class="math display">\[
 \frac{\mathrm{d}u}{\mathrm{d}t} + \frac{1}{\tau_m}u(t) = \frac{1}{\tau_m}u_{\text{rest}} + \frac{R}{\tau_m}I(t)
 \]</span></p>
@@ -661,10 +678,10 @@ u(t) = u_0 e^{-t/\tau_m} + u_{\text{rest}}(1 - e^{-t/\tau_m}) + \frac{R}{\tau_m}
 <p><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + \frac{R}{\tau_m} \int_0^t I(s) e^{-(t-s)/\tau_m} \mathrm{d}s}
 \]</span></p>
-<p>que coincide exactamente con la solución obtenida por variación de constantes <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>10.7</span></a>.</p>
+<p>que coincide exactamente con la solución obtenida por variación de constantes <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>11.7</span></a>.</p>
 </div>
 <p><strong>Interpretación física</strong>:</p>
-<p>La solución <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>10.7</span></a> revela tres componentes fundamentales:</p>
+<p>La solución <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>11.7</span></a> revela tres componentes fundamentales:</p>
 <ol type="1">
 <li><p><strong>Estado de reposo</strong>: <span class="math inline">\(u_{\text{rest}}\)</span> es el potencial base al que tiende la membrana.</p></li>
 <li><p><strong>Término transitorio</strong>: <span class="math inline">\((u_0 - u_{\text{rest}}) e^{-t/\tau_m}\)</span> representa el decaimiento exponencial desde la condición inicial hacia el reposo.</p></li>
@@ -674,8 +691,8 @@ u(t) = u_0 e^{-t/\tau_m} + u_{\text{rest}}(1 - e^{-t/\tau_m}) + \frac{R}{\tau_m}
 </ol>
 <p>Este resultado generaliza los casos anteriores:</p>
 <ul>
-<li>Si <span class="math inline">\(I(t) = 0\)</span>, recuperamos la ecuación <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>10.3</span></a></li>
-<li>Si <span class="math inline">\(I(t) = I_0\)</span> (constante), recuperamos la ecuación <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>10.5</span></a></li>
+<li>Si <span class="math inline">\(I(t) = 0\)</span>, recuperamos la ecuación <a href="#eq-sol-homogenea" class="quarto-xref">Ecuación&nbsp;<span>11.3</span></a></li>
+<li>Si <span class="math inline">\(I(t) = I_0\)</span> (constante), recuperamos la ecuación <a href="#eq-sol-corriente-constante" class="quarto-xref">Ecuación&nbsp;<span>11.5</span></a></li>
 </ul>
 </section>
 <section id="caso-particular-corriente-tipo-escalón-heaviside" class="level2">
@@ -686,10 +703,10 @@ I(t) = I_0 \mathcal{H}(t - t_0)
 \]</span></p>
 <p>donde <span class="math inline">\(\mathcal{H}(t - t_0)\)</span> es la función escalón unitario que vale <span class="math inline">\(0\)</span> para <span class="math inline">\(t &lt; t_0\)</span> y <span class="math inline">\(1\)</span> para <span class="math inline">\(t \geq t_0\)</span>. Este caso modela una neurona que está en reposo hasta que en <span class="math inline">\(t = t_0\)</span> se le aplica súbitamente una corriente constante.</p>
 <div id="exr-neurona-heaviside" class="theorem exercise" data-title="Neurona con corriente escalón">
-<p><span class="theorem-title"><strong>Ejercicio 10.4</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>10.6</span></a> con <span class="math inline">\(I(t) = I_0 \mathcal{H}(t - t_0)\)</span> y condición inicial <span class="math inline">\(u(0) = u_0\)</span>. Usar la transformada de Laplace.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.4</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>11.6</span></a> con <span class="math inline">\(I(t) = I_0 \mathcal{H}(t - t_0)\)</span> y condición inicial <span class="math inline">\(u(0) = u_0\)</span>. Usar la transformada de Laplace.</p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por convolución">
-<p><span class="proof-title"><em>Solución</em>. </span>Se parte de la solución general <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>10.7</span></a>:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Se parte de la solución general <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>11.7</span></a>:</p>
 <p><span class="math display">\[
 u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + \frac{R}{\tau_m} \int_0^t I(s) e^{-(t-s)/\tau_m} \mathrm{d}s
 \]</span></p>
@@ -760,14 +777,14 @@ u(t) = u_{\text{rest}} + RI_0 + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} - RI_0 e^{
 u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} &amp; \text{si } t &lt; t_0\\[8pt]
 u_{\text{rest}} + RI_0 + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} - RI_0 e^{-(t-t_0)/\tau_m} &amp; \text{si } t \geq t_0
 \end{cases}}
-\tag{10.8}\]</span></span></p>
+\tag{11.8}\]</span></span></p>
 <p>Esto se puede escribir de forma compacta como:</p>
 <p><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + RI_0\left[1 - e^{-(t-t_0)/\tau_m}\right]\mathcal{H}(t - t_0)}
 \]</span></p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por transformada de Laplace">
-<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>10.6</span></a>. Reescribiendo en forma estándar:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Se aplica la transformada de Laplace a la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>11.6</span></a>. Reescribiendo en forma estándar:</p>
 <p><span class="math display">\[
 \frac{\mathrm{d}u}{\mathrm{d}t} + \frac{1}{\tau_m}u(t) = \frac{1}{\tau_m}u_{\text{rest}} + \frac{R}{\tau_m}I(t)
 \]</span></p>
@@ -782,7 +799,7 @@ U(s)\left(s + \frac{1}{\tau_m}\right) = u_0 + \frac{u_{\text{rest}}}{\tau_m s} +
 \]</span></p>
 <p><span id="eq-neuron-laplacegeneral"><span class="math display">\[
 U(s) = \frac{u_0}{s + 1/\tau_m} + \frac{u_{\text{rest}}}{\tau_m s(s + 1/\tau_m)} + \frac{RI_0 e^{-st_0}}{\tau_m s(s + 1/\tau_m)}
-\tag{10.9}\]</span></span></p>
+\tag{11.9}\]</span></span></p>
 <p><strong>Paso 2: Transformada inversa del primer y segundo término</strong></p>
 <p>Estos términos ya fueron calculados en casos anteriores:</p>
 <p><span class="math display">\[
@@ -831,7 +848,7 @@ u(t) = u_{\text{rest}} + (u_0 - u_{\text{rest}}) e^{-t/\tau_m} + RI_0 - RI_0 e^{
 \]</span></p>
 </div>
 <p><strong>Interpretación física</strong>:</p>
-<p>La solución <a href="#eq-sol-heaviside" class="quarto-xref">Ecuación&nbsp;<span>10.8</span></a> muestra que:</p>
+<p>La solución <a href="#eq-sol-heaviside" class="quarto-xref">Ecuación&nbsp;<span>11.8</span></a> muestra que:</p>
 <ol type="1">
 <li><p><strong>Antes de <span class="math inline">\(t_0\)</span></strong>: El potencial evoluciona según la ecuación homogénea, decayendo desde <span class="math inline">\(u_0\)</span> hacia <span class="math inline">\(u_{\text{rest}}\)</span>.</p></li>
 <li><p><strong>En <span class="math inline">\(t = t_0\)</span></strong>: Se produce un cambio instantáneo en la corriente aplicada, pero el potencial permanece continuo.</p></li>
@@ -846,10 +863,10 @@ I(t) = Q_0 \delta(t - t_0)
 \]</span></p>
 <p>donde <span class="math inline">\(Q_0\)</span> representa la carga total inyectada instantáneamente. Este caso modela un estímulo sináptico puntual, como el que ocurre cuando llega un potencial de acción de una neurona presináptica.</p>
 <div id="exr-neurona-dirac" class="theorem exercise" data-title="Neurona con corriente impulsiva">
-<p><span class="theorem-title"><strong>Ejercicio 10.5</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>10.6</span></a> con <span class="math inline">\(I(t) = Q_0 \delta(t - t_0)\)</span> y condición inicial <span class="math inline">\(u(0) = u_{\text{rest}}\)</span> (la neurona parte del reposo). Usar la solución general por convolución.</p>
+<p><span class="theorem-title"><strong>Ejercicio 11.5</strong></span> Resolver la ecuación <a href="#eq-neurona-general" class="quarto-xref">Ecuación&nbsp;<span>11.6</span></a> con <span class="math inline">\(I(t) = Q_0 \delta(t - t_0)\)</span> y condición inicial <span class="math inline">\(u(0) = u_{\text{rest}}\)</span> (la neurona parte del reposo). Usar la solución general por convolución.</p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución usando la propiedad de la delta de Dirac">
-<p><span class="proof-title"><em>Solución</em>. </span>Se parte de la solución general <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>10.7</span></a> con <span class="math inline">\(u_0 = u_{\text{rest}}\)</span>:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Se parte de la solución general <a href="#eq-sol-general-convolucion" class="quarto-xref">Ecuación&nbsp;<span>11.7</span></a> con <span class="math inline">\(u_0 = u_{\text{rest}}\)</span>:</p>
 <p><span class="math display">\[
 u(t) = u_{\text{rest}} + \frac{R}{\tau_m} \int_0^t I(s) e^{-(t-s)/\tau_m} \mathrm{d}s
 \]</span></p>
@@ -879,14 +896,14 @@ u(t) = u_{\text{rest}} + \frac{RQ_0}{\tau_m} e^{-(t-t_0)/\tau_m}
 u_{\text{rest}} &amp; \text{si } t &lt; t_0\\[8pt]
 u_{\text{rest}} + \frac{RQ_0}{\tau_m} e^{-(t-t_0)/\tau_m} &amp; \text{si } t \geq t_0
 \end{cases}}
-\tag{10.10}\]</span></span></p>
+\tag{11.10}\]</span></span></p>
 <p>Esto se puede escribir de forma compacta como:</p>
 <p><span class="math display">\[
 \boxed{u(t) = u_{\text{rest}} + \frac{RQ_0}{\tau_m} e^{-(t-t_0)/\tau_m} \mathcal{H}(t - t_0)}
 \]</span></p>
 </div>
 <div class="make-collapse proof solution" data-title="Resolución por transformada de Laplace">
-<p><span class="proof-title"><em>Solución</em>. </span>Aplicando la transformada de Laplace, la ecuación con la transformada de Laplace es <a href="#eq-neuron-laplacegeneral" class="quarto-xref">Ecuación&nbsp;<span>10.9</span></a> on <span class="math inline">\(I(t) = Q_0 \delta(t - t_0)\)</span> y <span class="math inline">\(u_0 = u_{\text{rest}}\)</span>:</p>
+<p><span class="proof-title"><em>Solución</em>. </span>Aplicando la transformada de Laplace, la ecuación con la transformada de Laplace es <a href="#eq-neuron-laplacegeneral" class="quarto-xref">Ecuación&nbsp;<span>11.9</span></a> on <span class="math inline">\(I(t) = Q_0 \delta(t - t_0)\)</span> y <span class="math inline">\(u_0 = u_{\text{rest}}\)</span>:</p>
 <p><span class="math display">\[
 U(s) = \frac{u_{\text{rest}}}{s + 1/\tau_m} + \frac{u_{\text{rest}}}{\tau_m s(s + 1/\tau_m)} + \frac{R}{\tau_m(s + 1/\tau_m)}\mathcal{L}\{Q_0 \delta(t - t_0)\}
 \]</span></p>
@@ -906,14 +923,14 @@ U(s) = \frac{u_{\text{rest}}}{s + 1/\tau_m} + \frac{u_{\text{rest}}}{\tau_m s(s 
 <p>que coincide con la solución por convolución.</p>
 </div>
 <p><strong>Interpretación física</strong>:</p>
-<p>La solución <a href="#eq-sol-dirac" class="quarto-xref">Ecuación&nbsp;<span>10.10</span></a> muestra que:</p>
+<p>La solución <a href="#eq-sol-dirac" class="quarto-xref">Ecuación&nbsp;<span>11.10</span></a> muestra que:</p>
 <ol type="1">
 <li><p><strong>Antes de <span class="math inline">\(t_0\)</span></strong>: La neurona permanece en reposo.</p></li>
 <li><p><strong>En <span class="math inline">\(t = t_0\)</span></strong>: Se produce un salto instantáneo en el potencial de membrana. El potencial salta a: <span class="math display">\[
 u(t_0^+) = u_{\text{rest}} + \frac{RQ_0}{\tau_m}
 \]</span> Esta es la <strong>respuesta al impulso</strong> (impulse response) del sistema neuronal.</p></li>
 <li><p><strong>Después de <span class="math inline">\(t_0\)</span></strong>: El potencial decae exponencialmente hacia el reposo con constante de tiempo <span class="math inline">\(\tau_m\)</span>. Este decaimiento representa el efecto de leakage que disipa la carga inyectada.</p></li>
-<li><p><strong>Potencial postsináptico</strong>: La solución <a href="#eq-sol-dirac" class="quarto-xref">Ecuación&nbsp;<span>10.10</span></a> es análoga a un <strong>potencial postsináptico excitatorio</strong> (EPSP) en neurociencia, donde una neurona presináptica provoca un aumento breve y transitorio del potencial de la neurona postsináptica.</p></li>
+<li><p><strong>Potencial postsináptico</strong>: La solución <a href="#eq-sol-dirac" class="quarto-xref">Ecuación&nbsp;<span>11.10</span></a> es análoga a un <strong>potencial postsináptico excitatorio</strong> (EPSP) en neurociencia, donde una neurona presináptica provoca un aumento breve y transitorio del potencial de la neurona postsináptica.</p></li>
 <li><p><strong>Superposición</strong>: Si la neurona recibe múltiples impulsos en diferentes tiempos <span class="math inline">\(t_1, t_2, \ldots, t_n\)</span>, por linealidad del sistema, la respuesta total es la suma de las respuestas individuales: <span class="math display">\[
 u(t) = u_{\text{rest}} + \frac{R}{\tau_m} \sum_{i=1}^{n} Q_i e^{-(t-t_i)/\tau_m} \mathcal{H}(t - t_i)
 \]</span> Este principio es fundamental en la integración sináptica neuronal.</p></li>
@@ -1776,6 +1793,9 @@ window._ojs.runtime.interpretFromScriptTags();
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../qmds/farmaco_dosis_repetidas.html" class="pagination-link" aria-label="Dosis repetidas de un fármaco: una EDO con impulsos">
+        <span class="nav-page-text"><span class="chapter-title">Dosis repetidas de un fármaco: una EDO con impulsos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span><span class="al">TODO</span><span class="co">: modelo de predicción sismica --&gt;</span></span>

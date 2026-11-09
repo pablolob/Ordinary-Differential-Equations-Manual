@@ -67,7 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../qmds/otros_recursos.html" rel="next">
-<link href="../qmds/visualizador-plano-fases.html" rel="prev">
+<link href="../qmds/references.html" rel="prev">
 <link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -205,6 +205,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../qmds/02-metodos-elementales-resolucion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Métodos elementales de resolución de ecuaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../qmds/modelos_poblacionales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Modelos poblacionales</span></a>
   </div>
 </li>
@@ -221,6 +226,12 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../qmds/visualizador-plano-fases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Planos de fases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -268,6 +279,11 @@ window.Quarto = {
   <a href="../qmds/neurona.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Modelo de Neurona Integrate-Fire-Leakage</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/farmaco_dosis_repetidas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dosis repetidas de un fármaco: una EDO con impulsos</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -280,14 +296,15 @@ window.Quarto = {
     <h2 id="toc-title">En este capítulo</h2>
    
   <ul>
-  <li><a href="#definicións" id="toc-definicións" class="nav-link active" data-scroll-target="#definicións">Definicións</a></li>
+  <li><a href="#definiciones" id="toc-definiciones" class="nav-link active" data-scroll-target="#definiciones">Definiciones</a></li>
   <li><a href="#teoremas" id="toc-teoremas" class="nav-link" data-scroll-target="#teoremas">Teoremas</a></li>
-  <li><a href="#proposicións" id="toc-proposicións" class="nav-link" data-scroll-target="#proposicións">Proposicións</a></li>
+  <li><a href="#proposiciones" id="toc-proposiciones" class="nav-link" data-scroll-target="#proposiciones">Proposiciones</a></li>
   <li><a href="#corolarios" id="toc-corolarios" class="nav-link" data-scroll-target="#corolarios">Corolarios</a></li>
   <li><a href="#ejemplos" id="toc-ejemplos" class="nav-link" data-scroll-target="#ejemplos">Ejemplos</a></li>
   <li><a href="#ejercicios" id="toc-ejercicios" class="nav-link" data-scroll-target="#ejercicios">Ejercicios</a></li>
-  <li><a href="#solucións" id="toc-solucións" class="nav-link" data-scroll-target="#solucións">Solucións</a></li>
-  <li><a href="#visualizacións" id="toc-visualizacións" class="nav-link" data-scroll-target="#visualizacións">Visualizacións</a></li>
+  <li><a href="#soluciones" id="toc-soluciones" class="nav-link" data-scroll-target="#soluciones">Soluciones</a></li>
+  <li><a href="#métodos-de-resolución" id="toc-métodos-de-resolución" class="nav-link" data-scroll-target="#métodos-de-resolución">Métodos de resolución</a></li>
+  <li><a href="#visualizaciones" id="toc-visualizaciones" class="nav-link" data-scroll-target="#visualizaciones">Visualizaciones</a></li>
   </ul>
 </nav>
     </div>
@@ -329,52 +346,67 @@ window.Quarto = {
 </div>
 <p>Este documento contiene índices organizados de todas las definiciones, teoremas, proposiciones y otros elementos matemáticos presentes en los apuntes.</p>
 <hr>
-<section id="definicións" class="level2">
-<h2 class="anchored" data-anchor-id="definicións">Definicións</h2>
+<section id="definiciones" class="level2">
+<h2 class="anchored" data-anchor-id="definiciones">Definiciones</h2>
 <ol type="1">
-<li><a href="01-introduccion.html#def-orden" class="quarto-xref">Definición&nbsp;<span>1.1</span></a> - <strong>Forma estándar</strong></li>
+<li><a href="01-introduccion.html#def-orden" class="quarto-xref">Definición&nbsp;<span>1.1</span></a> - <strong>Orden</strong></li>
 <li><a href="01-introduccion.html#def-ecuacion-lineal" class="quarto-xref">Definición&nbsp;<span>1.2</span></a> - <strong>Ecuación lineal</strong></li>
 <li><a href="01-introduccion.html#def-forma-estandar" class="quarto-xref">Definición&nbsp;<span>1.3</span></a> - <strong>Forma estándar</strong></li>
 <li><a href="01-introduccion.html#def-forma-normal" class="quarto-xref">Definición&nbsp;<span>1.4</span></a> - <strong>Forma Normal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-system" class="quarto-xref">Definición&nbsp;<span>4.1</span></a> - <strong>Sistema de ecuaciones diferenciales de primer orden</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-systemsolution" class="quarto-xref">Definición&nbsp;<span>4.2</span></a> - <strong>Solución de un sistema</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-sistema-lineal" class="quarto-xref">Definición&nbsp;<span>4.3</span></a> - <strong>Sistema lineal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-dependencia-lineal" class="quarto-xref">Definición&nbsp;<span>4.4</span></a> - <strong>Dependencia e independencia lineal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-wronskiano" class="quarto-xref">Definición&nbsp;<span>4.5</span></a> - <strong>Wronskiano</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-matriz-fundamental" class="quarto-xref">Definición&nbsp;<span>4.6</span></a> - <strong>Matriz fundamental de soluciones</strong></li>
+<li><a href="01-introduccion.html#def-solucion-edo" class="quarto-xref">Definición&nbsp;<span>1.5</span></a> - <strong>Solución</strong></li>
+<li><a href="01-introduccion.html#def-solucion-explicita" class="quarto-xref">Definición&nbsp;<span>1.6</span></a> - <strong>Solución Explícita</strong></li>
+<li><a href="01-introduccion.html#def-solucion-implicita" class="quarto-xref">Definición&nbsp;<span>1.7</span></a> - <strong>Solución Implícita</strong></li>
+<li><a href="01-introduccion.html#def-pvi" class="quarto-xref">Definición&nbsp;<span>1.8</span></a> - <strong>Problema de valor inicial (PVI) o problema de Cauchy</strong></li>
+<li><a href="01-introduccion.html#def-problema-frontera" class="quarto-xref">Definición&nbsp;<span>1.9</span></a> - <strong>Problema de valores en la frontera</strong></li>
+<li><a href="01-introduccion.html#def-lipschitz-global" class="quarto-xref">Definición&nbsp;<span>1.10</span></a> - <strong>Función globalmente lipschitziana</strong></li>
+<li><a href="01-introduccion.html#def-lipschitz-local" class="quarto-xref">Definición&nbsp;<span>1.11</span></a> - <strong>Función localmente lipschitziana</strong></li>
+<li><a href="01-introduccion.html#def-campo-direcciones" class="quarto-xref">Definición&nbsp;<span>1.12</span></a> - <strong>Campo de direcciones</strong></li>
+<li><a href="01-introduccion.html#def-isoclina" class="quarto-xref">Definición&nbsp;<span>1.13</span></a> - <strong>Isoclina</strong></li>
+<li><a href="02-metodos-elementales-resolucion.html#def-variables-separables" class="quarto-xref">Definición&nbsp;<span>2.1</span></a> - <strong>Ecuación diferencial de variables separables</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-system" class="quarto-xref">Definición&nbsp;<span>5.1</span></a> - <strong>Sistema de ecuaciones diferenciales de primer orden</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-systemsolution" class="quarto-xref">Definición&nbsp;<span>5.2</span></a> - <strong>Solución de un sistema</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-sistema-lineal" class="quarto-xref">Definición&nbsp;<span>5.3</span></a> - <strong>Sistema lineal</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-dependencia-lineal" class="quarto-xref">Definición&nbsp;<span>5.4</span></a> - <strong>Dependencia e independencia lineal</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-wronskiano" class="quarto-xref">Definición&nbsp;<span>5.5</span></a> - <strong>Wronskiano</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#def-matriz-fundamental" class="quarto-xref">Definición&nbsp;<span>5.6</span></a> - <strong>Matriz fundamental de soluciones</strong></li>
 </ol>
 <hr>
 </section>
 <section id="teoremas" class="level2">
 <h2 class="anchored" data-anchor-id="teoremas">Teoremas</h2>
 <ol type="1">
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-superposicion" class="quarto-xref">Teorema&nbsp;<span>4.1</span></a> - <strong>Principio de superposición</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-abel" class="quarto-xref">Teorema&nbsp;<span>4.2</span></a> - <strong>Teorema de Abel</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-sistema-fundamental" class="quarto-xref">Teorema&nbsp;<span>4.3</span></a> - <strong>Existencia de un sistema fundamental de soluciones (matriz identidad como base)</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-solucion-general-no-homogeneo" class="quarto-xref">Teorema&nbsp;<span>4.4</span></a> - <strong>Estructura de la solución general</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-superposicion-no-homogeneo" class="quarto-xref">Teorema&nbsp;<span>4.5</span></a> - <strong>Principio de superposición para sistemas no homogéneos</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>4.6</span></a> - <strong>Caracterización de matriz fundamental</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-autovalores-distintos" class="quarto-xref">Teorema&nbsp;<span>4.7</span></a> - <strong>Soluciones para autovalores con multiplicidad algebraica igual a la geométrica</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-autovalores-repetidos" class="quarto-xref">Teorema&nbsp;<span>4.8</span></a> - <strong>Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica</strong></li>
+<li><a href="01-introduccion.html#thm-peano" class="quarto-xref">Teorema&nbsp;<span>1.1</span></a> - <strong>Teorema de existencia de Peano</strong></li>
+<li><a href="01-introduccion.html#thm-picard-lindelof-global" class="quarto-xref">Teorema&nbsp;<span>1.2</span></a> - <strong>Teorema de Picard–Lindelöf (versión global)</strong></li>
+<li><a href="01-introduccion.html#thm-picard-lindelof-local" class="quarto-xref">Teorema&nbsp;<span>1.3</span></a> - <strong>Teorema de Picard–Lindelöf (versión local)</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-superposicion" class="quarto-xref">Teorema&nbsp;<span>5.1</span></a> - <strong>Principio de superposición</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-abel" class="quarto-xref">Teorema&nbsp;<span>5.2</span></a> - <strong>Teorema de Abel</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-sistema-fundamental" class="quarto-xref">Teorema&nbsp;<span>5.3</span></a> - <strong>Existencia de un sistema fundamental de soluciones (matriz identidad como base)</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-solucion-general-no-homogeneo" class="quarto-xref">Teorema&nbsp;<span>5.4</span></a> - <strong>Estructura de la solución general</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-superposicion-no-homogeneo" class="quarto-xref">Teorema&nbsp;<span>5.5</span></a> - <strong>Principio de superposición para sistemas no homogéneos</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>5.6</span></a> - <strong>Caracterización de matriz fundamental</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-autovalores-distintos" class="quarto-xref">Teorema&nbsp;<span>5.7</span></a> - <strong>Soluciones para autovalores con multiplicidad algebraica igual a la geométrica</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#thm-autovalores-repetidos" class="quarto-xref">Teorema&nbsp;<span>5.8</span></a> - <strong>Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica</strong></li>
 </ol>
 <hr>
 </section>
-<section id="proposicións" class="level2">
-<h2 class="anchored" data-anchor-id="proposicións">Proposicións</h2>
+<section id="proposiciones" class="level2">
+<h2 class="anchored" data-anchor-id="proposiciones">Proposiciones</h2>
 <ol type="1">
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-reduccion-orden" class="quarto-xref">Proposición&nbsp;<span>4.1</span></a> - <strong>Reducción de orden superior a sistema de primer orden</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-wronskiano-dependencia" class="quarto-xref">Proposición&nbsp;<span>4.2</span></a> - <strong>Wronskiano y dependencia lineal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-relacion-matrices-fundamentales" class="quarto-xref">Proposición&nbsp;<span>4.3</span></a> - <strong>Relación entre matrices fundamentales</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-autovalores-soluciones" class="quarto-xref">Proposición&nbsp;<span>4.4</span></a> - <strong>Solución exponencial y autovalores</strong></li>
+<li><a href="01-introduccion.html#prp-lipschitz-derivada" class="quarto-xref">Proposición&nbsp;<span>1.1</span></a> - <strong>Condición de Lipschitz y derivadas acotadas</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-reduccion-orden" class="quarto-xref">Proposición&nbsp;<span>5.1</span></a> - <strong>Reducción de orden superior a sistema de primer orden</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-wronskiano-dependencia" class="quarto-xref">Proposición&nbsp;<span>5.2</span></a> - <strong>Wronskiano y dependencia lineal</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-relacion-matrices-fundamentales" class="quarto-xref">Proposición&nbsp;<span>5.3</span></a> - <strong>Relación entre matrices fundamentales</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#prp-autovalores-soluciones" class="quarto-xref">Proposición&nbsp;<span>5.4</span></a> - <strong>Solución exponencial y autovalores</strong></li>
 </ol>
 <hr>
 </section>
 <section id="corolarios" class="level2">
 <h2 class="anchored" data-anchor-id="corolarios">Corolarios</h2>
 <ol type="1">
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>4.1</span></a> - <strong>Criterio del Wronskiano para dependencia e independencia lineal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-solucion-general-sistema" class="quarto-xref">Corolario&nbsp;<span>4.2</span></a> - <strong>Solución general del sistema no homogéneo</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-solucion-pvi-matriz-fundamental" class="quarto-xref">Corolario&nbsp;<span>4.3</span></a> - <strong>Solución de problema de valor inicia</strong></li>
+<li><a href="01-introduccion.html#cor-lipschitz-local" class="quarto-xref">Corolario&nbsp;<span>1.1</span></a> - <strong>Criterio de lipschitzianidad local</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>5.1</span></a> - <strong>Criterio del Wronskiano para dependencia e independencia lineal</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-solucion-general-sistema" class="quarto-xref">Corolario&nbsp;<span>5.2</span></a> - <strong>Solución general del sistema no homogéneo</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#cor-solucion-pvi-matriz-fundamental" class="quarto-xref">Corolario&nbsp;<span>5.3</span></a> - <strong>Solución de problema de valor inicia</strong></li>
 </ol>
 <hr>
 </section>
@@ -387,15 +419,35 @@ window.Quarto = {
 <li><a href="01-introduccion.html#exm-lineal" class="quarto-xref">Ejemplo&nbsp;<span>1.4</span></a> - <strong>exm-lineal</strong></li>
 <li><a href="01-introduccion.html#exm-autonoma" class="quarto-xref">Ejemplo&nbsp;<span>1.5</span></a> - <strong>exm-autonoma</strong></li>
 <li><a href="01-introduccion.html#exm-forma-normal" class="quarto-xref">Ejemplo&nbsp;<span>1.6</span></a> - <strong>exm-forma-normal</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-systemsolucion" class="quarto-xref">Ejemplo&nbsp;<span>4.1</span></a> - <strong>Ejemplo: comprobar si una función es solución</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-edo-tercer-orden" class="quarto-xref">Ejemplo&nbsp;<span>4.2</span></a> - <strong>Ejemplo: Ecuación de orden 3</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-segundo-orden" class="quarto-xref">Ejemplo&nbsp;<span>4.3</span></a> - <strong>Ejemplo: sistema de orden 2</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-a-orden-superior" class="quarto-xref">Ejemplo&nbsp;<span>4.4</span></a> - <strong>Ejemplo: Sistema de dos ecuaciones</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-3x3-a-orden-superior" class="quarto-xref">Ejemplo&nbsp;<span>4.5</span></a> - <strong>Ejemplo: sistema de tres ecuaciones</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-2x2" class="quarto-xref">Ejemplo&nbsp;<span>4.6</span></a> - <strong>Ejemplo: autovalores distintos</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-3x3" class="quarto-xref">Ejemplo&nbsp;<span>4.7</span></a> - <strong>Ejemplo: multiplicidad geometrica igual a la algebraica</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-6x6" class="quarto-xref">Ejemplo&nbsp;<span>4.8</span></a> - <strong>Ejemplo: sistema 6x6</strong></li>
-<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-complejos" class="quarto-xref">Ejemplo&nbsp;<span>4.9</span></a> - <strong>Ejemplo: Autovalores complejos</strong></li>
+<li><a href="01-introduccion.html#exm-solucion-explicita-implicita" class="quarto-xref">Ejemplo&nbsp;<span>1.7</span></a> - <strong>exm-solucion-explicita-implicita</strong></li>
+<li><a href="01-introduccion.html#exm-comprobar-implicita" class="quarto-xref">Ejemplo&nbsp;<span>1.8</span></a> - <strong>exm-comprobar-implicita</strong></li>
+<li><a href="01-introduccion.html#exm-comprobar-explicita" class="quarto-xref">Ejemplo&nbsp;<span>1.9</span></a> - <strong>exm-comprobar-explicita</strong></li>
+<li><a href="01-introduccion.html#exm-comprobar-tramos" class="quarto-xref">Ejemplo&nbsp;<span>1.10</span></a> - <strong>exm-comprobar-tramos</strong></li>
+<li><a href="01-introduccion.html#exm-pvi-unico" class="quarto-xref">Ejemplo&nbsp;<span>1.11</span></a> - <strong>PVI con solución única</strong></li>
+<li><a href="01-introduccion.html#exm-pvi-sin-existencia" class="quarto-xref">Ejemplo&nbsp;<span>1.12</span></a> - <strong>Problema sin solución</strong></li>
+<li><a href="01-introduccion.html#exm-pvi-finitas" class="quarto-xref">Ejemplo&nbsp;<span>1.13</span></a> - <strong>Problema con exactamente dos soluciones</strong></li>
+<li><a href="01-introduccion.html#exm-pvi-infinitas" class="quarto-xref">Ejemplo&nbsp;<span>1.14</span></a> - <strong>PVI con infinitas soluciones</strong></li>
+<li><a href="01-introduccion.html#exm-condiciones-dirichlet" class="quarto-xref">Ejemplo&nbsp;<span>1.15</span></a> - <strong>Condiciones de Dirichlet</strong></li>
+<li><a href="01-introduccion.html#exm-condiciones-neumann" class="quarto-xref">Ejemplo&nbsp;<span>1.16</span></a> - <strong>Condiciones de Neumann</strong></li>
+<li><a href="01-introduccion.html#exm-condiciones-robin" class="quarto-xref">Ejemplo&nbsp;<span>1.17</span></a> - <strong>Condición de Robin</strong></li>
+<li><a href="01-introduccion.html#exm-lipschitz" class="quarto-xref">Ejemplo&nbsp;<span>1.18</span></a> - <strong>Funciones lipschitzianas y no lipschitzianas</strong></li>
+<li><a href="01-introduccion.html#exm-pvi-explosion" class="quarto-xref">Ejemplo&nbsp;<span>1.19</span></a> - <strong>Existencia solo local</strong></li>
+<li><a href="01-introduccion.html#exm-campo-circunferencias" class="quarto-xref">Ejemplo&nbsp;<span>1.20</span></a> - <strong>Campo de y’ = -x/y</strong></li>
+<li><a href="01-introduccion.html#exm-campo-hiperbolas-cuadrados" class="quarto-xref">Ejemplo&nbsp;<span>1.21</span></a> - <strong>Campo de y’ = x/y</strong></li>
+<li><a href="01-introduccion.html#exm-campo-rectas" class="quarto-xref">Ejemplo&nbsp;<span>1.22</span></a> - <strong>Campo de y’ = y/x</strong></li>
+<li><a href="01-introduccion.html#exm-campo-hiperbolas-producto" class="quarto-xref">Ejemplo&nbsp;<span>1.23</span></a> - <strong>Campo de y’ = -y/x</strong></li>
+<li><a href="02-metodos-elementales-resolucion.html#exm-separables-sin-ceros" class="quarto-xref">Ejemplo&nbsp;<span>2.1</span></a> - <strong>Solución explícita</strong></li>
+<li><a href="02-metodos-elementales-resolucion.html#exm-separables-solucion-constante" class="quarto-xref">Ejemplo&nbsp;<span>2.2</span></a> - <strong>La solución que se pierde al dividir</strong></li>
+<li><a href="02-metodos-elementales-resolucion.html#exm-separables-lineal-homogenea" class="quarto-xref">Ejemplo&nbsp;<span>2.3</span></a> - <strong>Resolución mediante separación de variables</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-systemsolucion" class="quarto-xref">Ejemplo&nbsp;<span>5.1</span></a> - <strong>Ejemplo: comprobar si una función es solución</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-edo-tercer-orden" class="quarto-xref">Ejemplo&nbsp;<span>5.2</span></a> - <strong>Ejemplo: Ecuación de orden 3</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-segundo-orden" class="quarto-xref">Ejemplo&nbsp;<span>5.3</span></a> - <strong>Ejemplo: sistema de orden 2</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-a-orden-superior" class="quarto-xref">Ejemplo&nbsp;<span>5.4</span></a> - <strong>Ejemplo: Sistema de dos ecuaciones</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-sistema-3x3-a-orden-superior" class="quarto-xref">Ejemplo&nbsp;<span>5.5</span></a> - <strong>Ejemplo: sistema de tres ecuaciones</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-2x2" class="quarto-xref">Ejemplo&nbsp;<span>5.6</span></a> - <strong>Ejemplo: autovalores distintos</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-3x3" class="quarto-xref">Ejemplo&nbsp;<span>5.7</span></a> - <strong>Ejemplo: multiplicidad geometrica igual a la algebraica</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-6x6" class="quarto-xref">Ejemplo&nbsp;<span>5.8</span></a> - <strong>Ejemplo: sistema 6x6</strong></li>
+<li><a href="04-sistemas-ecuaciones-diferenciales.html#exm-autovalores-complejos" class="quarto-xref">Ejemplo&nbsp;<span>5.9</span></a> - <strong>Ejemplo: Autovalores complejos</strong></li>
 </ol>
 <hr>
 </section>
@@ -403,21 +455,31 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="ejercicios">Ejercicios</h2>
 <ol type="1">
 <li><a href="01-introduccion.html#exr-parabola" class="quarto-xref">Ejercicio&nbsp;<span>1.1</span></a> - <strong>exr-parabola</strong></li>
-<li><a href="neurona.html#exr-neurona-homogenea" class="quarto-xref">Ejercicio&nbsp;<span>10.1</span></a> - <strong>Solución de la ecuación homogénea</strong></li>
-<li><a href="neurona.html#exr-neurona-corriente-constante" class="quarto-xref">Ejercicio&nbsp;<span>10.2</span></a> - <strong>Neurona con corriente constante</strong></li>
-<li><a href="neurona.html#exr-neurona-general" class="quarto-xref">Ejercicio&nbsp;<span>10.3</span></a> - <strong>Neurona con corriente variable</strong></li>
-<li><a href="neurona.html#exr-neurona-heaviside" class="quarto-xref">Ejercicio&nbsp;<span>10.4</span></a> - <strong>Neurona con corriente escalón</strong></li>
-<li><a href="neurona.html#exr-neurona-dirac" class="quarto-xref">Ejercicio&nbsp;<span>10.5</span></a> - <strong>Neurona con corriente impulsiva</strong></li>
+<li><a href="01-introduccion.html#exr-campo-parametrico" class="quarto-xref">Ejercicio&nbsp;<span>1.2</span></a> - <strong>Familia paramétrica y’ = a·x/y</strong></li>
+<li><a href="neurona.html#exr-neurona-homogenea" class="quarto-xref">Ejercicio&nbsp;<span>11.1</span></a> - <strong>Solución de la ecuación homogénea</strong></li>
+<li><a href="neurona.html#exr-neurona-corriente-constante" class="quarto-xref">Ejercicio&nbsp;<span>11.2</span></a> - <strong>Neurona con corriente constante</strong></li>
+<li><a href="neurona.html#exr-neurona-general" class="quarto-xref">Ejercicio&nbsp;<span>11.3</span></a> - <strong>Neurona con corriente variable</strong></li>
+<li><a href="neurona.html#exr-neurona-heaviside" class="quarto-xref">Ejercicio&nbsp;<span>11.4</span></a> - <strong>Neurona con corriente escalón</strong></li>
+<li><a href="neurona.html#exr-neurona-dirac" class="quarto-xref">Ejercicio&nbsp;<span>11.5</span></a> - <strong>Neurona con corriente impulsiva</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-modelo" class="quarto-xref">Ejercicio&nbsp;<span>12.1</span></a> - <strong>Formulación del modelo de eliminación</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-decaimiento" class="quarto-xref">Ejercicio&nbsp;<span>12.2</span></a> - <strong>Solución de la ecuación de eliminación</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-vida-media" class="quarto-xref">Ejercicio&nbsp;<span>12.3</span></a> - <strong>Interpretar la vida media</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-tres-dosis" class="quarto-xref">Ejercicio&nbsp;<span>12.4</span></a> - <strong>Sucesión de concentraciones máximas</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-discreto" class="quarto-xref">Ejercicio&nbsp;<span>12.5</span></a> - <strong>Resolver el sistema por tramos</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-delta" class="quarto-xref">Ejercicio&nbsp;<span>12.6</span></a> - <strong>Efecto de un impulso sobre la concentración</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-equilibrio" class="quarto-xref">Ejercicio&nbsp;<span>12.7</span></a> - <strong>Del equilibrio discreto al ciclo periódico</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-zona" class="quarto-xref">Ejercicio&nbsp;<span>12.8</span></a> - <strong>Intervalos admisibles entre dosis</strong></li>
+<li><a href="farmaco_dosis_repetidas.html#exr-farmaco-carga" class="quarto-xref">Ejercicio&nbsp;<span>12.9</span></a> - <strong>Permanencia en la zona desde la primera dosis</strong></li>
 </ol>
 <hr>
 </section>
-<section id="solucións" class="level2">
-<h2 class="anchored" data-anchor-id="solucións">Solucións</h2>
+<section id="soluciones" class="level2">
+<h2 class="anchored" data-anchor-id="soluciones">Soluciones</h2>
 <ol type="1">
-<li><a href="01-introduccion.html#sol-01-comprobar" class="quarto-xref">Solution&nbsp;<span>1.2</span></a> - <strong>Solución</strong></li>
+<li><a href="01-introduccion.html#sol-01-comprobar" class="quarto-xref">Solution&nbsp;<span>1.2</span></a> - <strong>Comprobar si una función es solución</strong></li>
 <li><a href="01-introduccion.html#sol-01-unicidad" class="quarto-xref">Solution&nbsp;<span>1.3</span></a> - <strong>Demostrar que la solución anterior es única salvo constante</strong></li>
 <li><a href="01-introduccion.html#sol-01-pvi" class="quarto-xref">Solution&nbsp;<span>1.4</span></a> - <strong>Problemas de valor inicial (PVI)</strong></li>
-<li><a href="01-introduccion.html#sol-01-parametro" class="quarto-xref">Solution&nbsp;<span>1.5</span></a> - <strong>Solución: Estudio paramétrico</strong></li>
+<li><a href="01-introduccion.html#sol-01-parametro" class="quarto-xref">Solution&nbsp;<span>1.5</span></a> - <strong>Estudio paramétrico</strong></li>
 <li><a href="01-introduccion.html#sol-01-fases" class="quarto-xref">Solution&nbsp;<span>1.6</span></a> - <strong>Plano de fases</strong></li>
 <li><a href="01-introduccion.html#sol-01-equilibrio" class="quarto-xref">Solution&nbsp;<span>1.7</span></a> - <strong>Solución: Equilibrio</strong></li>
 <li><a href="01-introduccion.html#sol-01-campo" class="quarto-xref">Solution&nbsp;<span>1.8</span></a> - <strong>Campo de direcciones paramétrico</strong></li>
@@ -426,11 +488,18 @@ window.Quarto = {
 </ol>
 <hr>
 </section>
-<section id="visualizacións" class="level2">
-<h2 class="anchored" data-anchor-id="visualizacións">Visualizacións</h2>
-<!-- BUG: fix estas referencias para que se vean -->
-<!-- 1. @sec-vis-malthus - **Modelo de Malthus** -->
-<ol start="2" type="1">
+<section id="métodos-de-resolución" class="level2">
+<h2 class="anchored" data-anchor-id="métodos-de-resolución">Métodos de resolución</h2>
+<ol type="1">
+<li><a href="02-metodos-elementales-resolucion.html#alg-variables-separables" class="quarto-xref">método de resolución&nbsp;<span>2.1</span></a> - <strong>Variables separables</strong></li>
+</ol>
+<hr>
+</section>
+<section id="visualizaciones" class="level2">
+<h2 class="anchored" data-anchor-id="visualizaciones">Visualizaciones</h2>
+<ol type="1">
+<li><span class="quarto-unresolved-ref">?sec-vis-malthus</span> - <strong>Modelo de Malthus</strong></li>
+<li><a href="zz-herramientas.html#sec-vis-campo-general" class="quarto-xref"><span>Visualizador Plano de fases 1D:</span></a> - <strong>Visualizador Plano de fases 1D:</strong></li>
 <li><a href="tambor.html#sec-vis-tambor" class="quarto-xref"><span>Visualizador Interactivo de Modos de Vibración</span></a> - <strong>Visualizador Interactivo de Modos de Vibración</strong></li>
 </ol>
 <hr>
@@ -442,7 +511,7 @@ window.Quarto = {
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImR1bW15ID0gMVxyXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImR1bW15ID0gMVxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -905,8 +974,8 @@ window._ojs.runtime.interpretFromScriptTags();
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../qmds/visualizador-plano-fases.html" class="pagination-link" aria-label="Planos de fases">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Planos de fases</span></span>
+      <a href="../qmds/references.html" class="pagination-link" aria-label="Referencias">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Referencias</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -930,102 +999,154 @@ window._ojs.runtime.interpretFromScriptTags();
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Definicións</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Definiciones</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@def-orden - **Forma estándar**</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@def-orden - **Orden**</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@def-ecuacion-lineal - **Ecuación lineal**</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@def-forma-estandar - **Forma estándar**</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@def-forma-normal - **Forma Normal**</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@def-system - **Sistema de ecuaciones diferenciales de primer orden**</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@def-systemsolution - **Solución de un sistema**</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@def-sistema-lineal - **Sistema lineal**</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@def-dependencia-lineal - **Dependencia e independencia lineal**</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@def-wronskiano - **Wronskiano**</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@def-matriz-fundamental - **Matriz fundamental de soluciones**</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teoremas</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@thm-superposicion - **Principio de superposición**</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@thm-abel - **Teorema de Abel**</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@thm-sistema-fundamental - **Existencia de un sistema fundamental de soluciones (matriz identidad como base)**</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@thm-solucion-general-no-homogeneo - **Estructura de la solución general**</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@thm-superposicion-no-homogeneo - **Principio de superposición para sistemas no homogéneos**</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@thm-caracterizacion-matriz-fundamental - **Caracterización de matriz fundamental**</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@thm-autovalores-distintos - **Soluciones para autovalores con multiplicidad algebraica igual a la geométrica**</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@thm-autovalores-repetidos - **Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica**</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Proposicións</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@prp-reduccion-orden - **Reducción de orden superior a sistema de primer orden**</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@prp-wronskiano-dependencia - **Wronskiano y dependencia lineal**</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@prp-relacion-matrices-fundamentales - **Relación entre matrices fundamentales**</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@prp-autovalores-soluciones - **Solución exponencial y autovalores**</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corolarios</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@def-solucion-edo - **Solución**</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@def-solucion-explicita - **Solución Explícita**</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@def-solucion-implicita - **Solución Implícita**</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@def-pvi - **Problema de valor inicial (PVI) o problema de Cauchy**</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@def-problema-frontera - **Problema de valores en la frontera**</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@def-lipschitz-global - **Función globalmente lipschitziana**</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>@def-lipschitz-local - **Función localmente lipschitziana**</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>@def-campo-direcciones - **Campo de direcciones**</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>@def-isoclina - **Isoclina**</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>@def-variables-separables - **Ecuación diferencial de variables separables**</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>@def-system - **Sistema de ecuaciones diferenciales de primer orden**</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">16. </span>@def-systemsolution - **Solución de un sistema**</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">17. </span>@def-sistema-lineal - **Sistema lineal**</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">18. </span>@def-dependencia-lineal - **Dependencia e independencia lineal**</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">19. </span>@def-wronskiano - **Wronskiano**</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">20. </span>@def-matriz-fundamental - **Matriz fundamental de soluciones**</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teoremas</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@thm-peano - **Teorema de existencia de Peano**</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@thm-picard-lindelof-global - **Teorema de Picard–Lindelöf (versión global)**</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@thm-picard-lindelof-local - **Teorema de Picard–Lindelöf (versión local)**</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@thm-superposicion - **Principio de superposición**</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@thm-abel - **Teorema de Abel**</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@thm-sistema-fundamental - **Existencia de un sistema fundamental de soluciones (matriz identidad como base)**</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@thm-solucion-general-no-homogeneo - **Estructura de la solución general**</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@thm-superposicion-no-homogeneo - **Principio de superposición para sistemas no homogéneos**</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@thm-caracterizacion-matriz-fundamental - **Caracterización de matriz fundamental**</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@thm-autovalores-distintos - **Soluciones para autovalores con multiplicidad algebraica igual a la geométrica**</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>@thm-autovalores-repetidos - **Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica**</span>
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@cor-criterio-wronskiano - **Criterio del Wronskiano para dependencia e independencia lineal**</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@cor-solucion-general-sistema - **Solución general del sistema no homogéneo**</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@cor-solucion-pvi-matriz-fundamental - **Solución de problema de valor inicia**</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Proposiciones</span></span>
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplos</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@exm-disparocanon - **Ejemplo: Disparo Parabolico**</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@exm-exponential - **Ecuación lineal**</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@exm-orden - **exm-orden**</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@exm-lineal - **exm-lineal**</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@exm-autonoma - **exm-autonoma**</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@exm-forma-normal - **exm-forma-normal**</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@exm-systemsolucion - **Ejemplo: comprobar si una función es solución**</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@exm-edo-tercer-orden - **Ejemplo: Ecuación de orden 3**</span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@exm-sistema-segundo-orden - **Ejemplo: sistema de orden 2**</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@exm-sistema-a-orden-superior - **Ejemplo: Sistema de dos ecuaciones**</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>@exm-sistema-3x3-a-orden-superior - **Ejemplo: sistema de tres ecuaciones**</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>@exm-autovalores-2x2 - **Ejemplo: autovalores distintos**</span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>@exm-autovalores-3x3 - **Ejemplo: multiplicidad geometrica igual a la algebraica**</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>@exm-autovalores-6x6 - **Ejemplo: sistema 6x6**</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>@exm-autovalores-complejos - **Ejemplo: Autovalores complejos**</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicios</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@exr-parabola - **exr-parabola**</span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@exr-neurona-homogenea - **Solución de la ecuación homogénea**</span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@exr-neurona-corriente-constante - **Neurona con corriente constante**</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@exr-neurona-general - **Neurona con corriente variable**</span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@exr-neurona-heaviside - **Neurona con corriente escalón**</span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@exr-neurona-dirac - **Neurona con corriente impulsiva**</span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solucións</span></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@sol-01-comprobar - **Solución**</span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@sol-01-unicidad - **Demostrar que la solución anterior es única salvo constante**</span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@sol-01-pvi - **Problemas de valor inicial (PVI)**</span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@sol-01-parametro - **Solución: Estudio paramétrico**</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@sol-01-fases - **Plano de fases**</span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@sol-01-equilibrio - **Solución: Equilibrio**</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@sol-01-campo - **Campo de direcciones paramétrico**</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@sol-01-estable - **Solución: Equilibrio y estabilidad**</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@sol-01-estable - **Solución: Método de Euler**</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualizacións</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span><span class="al">BUG</span><span class="co">: fix estas referencias para que se vean --&gt;</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 1. @sec-vis-malthus - **Modelo de Malthus** --&gt;</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@sec-vis-tambor - **Visualizador Interactivo de Modos de Vibración**</span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@prp-lipschitz-derivada - **Condición de Lipschitz y derivadas acotadas**</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@prp-reduccion-orden - **Reducción de orden superior a sistema de primer orden**</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@prp-wronskiano-dependencia - **Wronskiano y dependencia lineal**</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@prp-relacion-matrices-fundamentales - **Relación entre matrices fundamentales**</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@prp-autovalores-soluciones - **Solución exponencial y autovalores**</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Corolarios</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@cor-lipschitz-local - **Criterio de lipschitzianidad local**</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@cor-criterio-wronskiano - **Criterio del Wronskiano para dependencia e independencia lineal**</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@cor-solucion-general-sistema - **Solución general del sistema no homogéneo**</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@cor-solucion-pvi-matriz-fundamental - **Solución de problema de valor inicia**</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejemplos</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@exm-disparocanon - **Ejemplo: Disparo Parabolico**</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@exm-exponential - **Ecuación lineal**</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@exm-orden - **exm-orden**</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@exm-lineal - **exm-lineal**</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@exm-autonoma - **exm-autonoma**</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@exm-forma-normal - **exm-forma-normal**</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@exm-solucion-explicita-implicita - **exm-solucion-explicita-implicita**</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@exm-comprobar-implicita - **exm-comprobar-implicita**</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@exm-comprobar-explicita - **exm-comprobar-explicita**</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@exm-comprobar-tramos - **exm-comprobar-tramos**</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>@exm-pvi-unico - **PVI con solución única**</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>@exm-pvi-sin-existencia - **Problema sin solución**</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>@exm-pvi-finitas - **Problema con exactamente dos soluciones**</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>@exm-pvi-infinitas - **PVI con infinitas soluciones**</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>@exm-condiciones-dirichlet - **Condiciones de Dirichlet**</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="ss">16. </span>@exm-condiciones-neumann - **Condiciones de Neumann**</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="ss">17. </span>@exm-condiciones-robin - **Condición de Robin**</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="ss">18. </span>@exm-lipschitz - **Funciones lipschitzianas y no lipschitzianas**</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="ss">19. </span>@exm-pvi-explosion - **Existencia solo local**</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">20. </span>@exm-campo-circunferencias - **Campo de y' = -x/y**</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="ss">21. </span>@exm-campo-hiperbolas-cuadrados - **Campo de y' = x/y**</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="ss">22. </span>@exm-campo-rectas - **Campo de y' = y/x**</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="ss">23. </span>@exm-campo-hiperbolas-producto - **Campo de y' = -y/x**</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="ss">24. </span>@exm-separables-sin-ceros - **Solución explícita**</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="ss">25. </span>@exm-separables-solucion-constante - **La solución que se pierde al dividir**</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="ss">26. </span>@exm-separables-lineal-homogenea - **Resolución mediante separación de variables**</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="ss">27. </span>@exm-systemsolucion - **Ejemplo: comprobar si una función es solución**</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="ss">28. </span>@exm-edo-tercer-orden - **Ejemplo: Ecuación de orden 3**</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="ss">29. </span>@exm-sistema-segundo-orden - **Ejemplo: sistema de orden 2**</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="ss">30. </span>@exm-sistema-a-orden-superior - **Ejemplo: Sistema de dos ecuaciones**</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="ss">31. </span>@exm-sistema-3x3-a-orden-superior - **Ejemplo: sistema de tres ecuaciones**</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="ss">32. </span>@exm-autovalores-2x2 - **Ejemplo: autovalores distintos**</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="ss">33. </span>@exm-autovalores-3x3 - **Ejemplo: multiplicidad geometrica igual a la algebraica**</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="ss">34. </span>@exm-autovalores-6x6 - **Ejemplo: sistema 6x6**</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="ss">35. </span>@exm-autovalores-complejos - **Ejemplo: Autovalores complejos**</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ejercicios</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@exr-parabola - **exr-parabola**</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@exr-campo-parametrico - **Familia paramétrica y' = a·x/y**</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@exr-neurona-homogenea - **Solución de la ecuación homogénea**</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@exr-neurona-corriente-constante - **Neurona con corriente constante**</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@exr-neurona-general - **Neurona con corriente variable**</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@exr-neurona-heaviside - **Neurona con corriente escalón**</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@exr-neurona-dirac - **Neurona con corriente impulsiva**</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@exr-farmaco-modelo - **Formulación del modelo de eliminación**</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@exr-farmaco-decaimiento - **Solución de la ecuación de eliminación**</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>@exr-farmaco-vida-media - **Interpretar la vida media**</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>@exr-farmaco-tres-dosis - **Sucesión de concentraciones máximas**</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>@exr-farmaco-discreto - **Resolver el sistema por tramos**</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>@exr-farmaco-delta - **Efecto de un impulso sobre la concentración**</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>@exr-farmaco-equilibrio - **Del equilibrio discreto al ciclo periódico**</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>@exr-farmaco-zona - **Intervalos admisibles entre dosis**</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="ss">16. </span>@exr-farmaco-carga - **Permanencia en la zona desde la primera dosis**</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## Soluciones</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@sol-01-comprobar - **Comprobar si una función es solución**</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@sol-01-unicidad - **Demostrar que la solución anterior es única salvo constante**</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@sol-01-pvi - **Problemas de valor inicial (PVI)**</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>@sol-01-parametro - **Estudio paramétrico**</span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>@sol-01-fases - **Plano de fases**</span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>@sol-01-equilibrio - **Solución: Equilibrio**</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>@sol-01-campo - **Campo de direcciones paramétrico**</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>@sol-01-estable - **Solución: Equilibrio y estabilidad**</span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>@sol-01-estable - **Solución: Método de Euler**</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="fu">## Métodos de resolución</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@alg-variables-separables - **Variables separables**</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualizaciones</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>@sec-vis-malthus - **Modelo de Malthus**</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>@sec-vis-campo-general - **Visualizador Plano de fases 1D:**</span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>@sec-vis-tambor - **Visualizador Interactivo de Modos de Vibración**</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>---</span>
 </code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

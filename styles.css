@@ -147,6 +147,7 @@ div.corollary,
 div.proposition,
 div.conjecture,
 div.definition,
+div.algorithm,
 div.exercise,
 div.remark {
   /* margin-left: 3 em; */
@@ -164,19 +165,28 @@ div.definition {
   border-left-color: #dff4e0; /* verde */
 }
 
-div.exercise,
-div.remark {
+div.algorithm {
+  border-left-color: #f7d3d3; /* rojo */
+}
+
+div.exercise {
   border-left-color: #f7d3d3; /* rojo */
 }
 
 div.proof:not(.remark),
 div.example,
 div.solution,
-/* div.proposition, */
-div.algorithm {
+div.remark {
   margin: 0;            /* elimina la indentación */
   border: none;         /* quita la línea izquierda */
   padding-left: 0;      /* restablece el padding */
+}
+
+/* Ejemplo no plegable (.make-uncollapse): se muestra como una definición, con barra naranja */
+div.example.make-uncollapse {
+  margin: 0 0 0 .85em;
+  padding-left: 0.6em;
+  border-left: 3px solid #f3a8454f;
 }
 
 /* -------------------------------------- */

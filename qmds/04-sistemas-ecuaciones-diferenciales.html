@@ -203,6 +203,11 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../qmds/02-metodos-elementales-resolucion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Métodos elementales de resolución de ecuaciones</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../qmds/modelos_poblacionales.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Modelos poblacionales</span></a>
   </div>
 </li>
@@ -219,6 +224,12 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../qmds/visualizador-plano-fases.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Planos de fases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -264,6 +275,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../qmds/neurona.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Modelo de Neurona Integrate-Fire-Leakage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../qmds/farmaco_dosis_repetidas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dosis repetidas de un fármaco: una EDO con impulsos</span></a>
   </div>
 </li>
       </ul>
@@ -357,7 +373,7 @@ window.Quarto = {
 </ol>
 <p>Además, se demostrará que ecuaciones de grado superior se pueden reducir a ecuaciones de orden uno. Los casos más generales quedan fuera del ámbito de estos apuntes. Un sistema de este tipo se expresa en la forma:</p>
 <div id="def-system" class="theorem definition" data-caption="Example title">
-<p><span class="theorem-title"><strong>Definición 4.1 (Sistema de ecuaciones diferenciales de primer orden)</strong></span> Un sistema de ecuaciones diferenciales ordinarias de primer orden es un conjunto de ecuaciones de la forma</p>
+<p><span class="theorem-title"><strong>Definición 5.1 (Sistema de ecuaciones diferenciales de primer orden)</strong></span> Un sistema de ecuaciones diferenciales ordinarias de primer orden es un conjunto de ecuaciones de la forma</p>
 <p><span class="math display">\[
 \begin{cases}
 \dfrac{dy_1}{dx}=f_1\bigl(x,y_1,\dots,y_n\bigr),\\[6pt]
@@ -372,13 +388,13 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="soluciones">Soluciones</h3>
 <p>Las soluciones de este sistema serán funciones vectoriales donde cada cordenada es solución de la correspondiente ecuación diferencial.</p>
 <div id="def-systemsolution" class="theorem definition">
-<p><span class="theorem-title"><strong>Definición 4.2 (Solución de un sistema)</strong></span> Sea <span class="math inline">\(\mathbf{y}(x)=(y_1(x),\dots,y_n(x))\)</span> definida en un intervalo <span class="math inline">\(I\subset\mathbb{R}\)</span> y con valores reales, es solución si <span class="math display">\[
+<p><span class="theorem-title"><strong>Definición 5.2 (Solución de un sistema)</strong></span> Sea <span class="math inline">\(\mathbf{y}(x)=(y_1(x),\dots,y_n(x))\)</span> definida en un intervalo <span class="math inline">\(I\subset\mathbb{R}\)</span> y con valores reales, es solución si <span class="math display">\[
 y_i'(x)=f_i\bigl(x,y_1(x),\dots,y_n(x)\bigr)A
 \]</span></p>
 <p>para todo <span class="math inline">\(x\in I\)</span> y <span class="math inline">\(i=1,\dots,n\)</span>.</p>
 </div>
 <div id="exm-systemsolucion" class="example theorem" data-title="Ejemplo: comprobar si una función es solución">
-<p><span class="theorem-title"><strong>Ejemplo 4.1</strong></span> Si <span class="math inline">\(y_1(x)=y_2(x)=e^{3x}\)</span>, la función <span class="math inline">\((y_1,y_2)\)</span> es una solución del sistema <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejemplo 5.1</strong></span> Si <span class="math inline">\(y_1(x)=y_2(x)=e^{3x}\)</span>, la función <span class="math inline">\((y_1,y_2)\)</span> es una solución del sistema <span class="math display">\[
 \begin{cases}
 \dfrac{dy_1}{dx}=4y_1-y_2,\\[6pt]
 \dfrac{dy_2}{dx}=y_1+2y_2,
@@ -396,11 +412,11 @@ y_1'=3e^{3x}=4y_1-y_2,\quad\text{y}\quad y_2'=3e^{3x}=y_1+2y_2.
 <h3 class="anchored" data-anchor-id="conversión-de-orden-superior-a-sistema-de-primer-orden">Conversión de orden superior a sistema de primer orden</h3>
 <p>Toda ecuación diferencial ordinaria de orden <span class="math inline">\(n\)</span> se puede reducir a un sistema equivalente de <span class="math inline">\(n\)</span> ecuaciones de primer orden.</p>
 <div id="prp-reduccion-orden" class="theorem proposition" data-collapse="true">
-<p><span class="theorem-title"><strong>Proposición 4.1 (Reducción de orden superior a sistema de primer orden)</strong></span> Cualquier ecuación diferencial ordinaria de orden <span class="math inline">\(n\)</span> se puede reducir a un sistema equivalente de <span class="math inline">\(n\)</span> ecuaciones de primer orden.</p>
+<p><span class="theorem-title"><strong>Proposición 5.1 (Reducción de orden superior a sistema de primer orden)</strong></span> Cualquier ecuación diferencial ordinaria de orden <span class="math inline">\(n\)</span> se puede reducir a un sistema equivalente de <span class="math inline">\(n\)</span> ecuaciones de primer orden.</p>
 <p>Para ello, es suficiente definir las variables</p>
 <p><span id="eq-cambio-variables"><span class="math display">\[
 y_1 = y,\quad y_2 = y', \dots, y_n = y^{(n-1)},
-\tag{4.1}\]</span></span></p>
+\tag{5.1}\]</span></span></p>
 <p>la función vectorial <span class="math inline">\((y_1, \dots, y_n)\)</span> es una solución del sistema de <span class="math inline">\(n\)</span> ecuaciones diferenciales de primer orden</p>
 <p><span id="eq-sistema-reducido"><span class="math display">\[
 \begin{cases}
@@ -409,10 +425,10 @@ y_1 = y,\quad y_2 = y', \dots, y_n = y^{(n-1)},
 \vdots\\[6pt]
 \dfrac{dy_n}{dx} = f\bigl(x, y_1, y_2, \dots, y_n\bigr)
 \end{cases}
-\tag{4.2}\]</span></span></p>
+\tag{5.2}\]</span></span></p>
 </div>
 <div id="exm-edo-tercer-orden" class="theorem example" data-title="Ejemplo: Ecuación de orden 3">
-<p><span class="theorem-title"><strong>Ejemplo 4.2</strong></span> Consideremos la ecuación diferencial de tercer orden:</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.2</strong></span> Consideremos la ecuación diferencial de tercer orden:</p>
 <p><span class="math display">\[
 y''' - 2y'' + y' - 3y = \sin(x)
 \]</span></p>
@@ -440,7 +456,7 @@ y_3' &amp;= y''' = 2y'' - y' + 3y + \sin(x) = 2y_3 - y_2 + 3y_1 + \sin(x)
 </div>
 <p><strong>Nota:</strong> La reducción permite convertir un sistema de ecuaciones de grado <span class="math inline">\(n\)</span> en un sistema de ecuaciones de grado 1.</p>
 <div id="exm-sistema-segundo-orden" class="theorem example" data-title="Ejemplo: sistema de orden 2">
-<p><span class="theorem-title"><strong>Ejemplo 4.3</strong></span> Consideremos el sistema de dos ecuaciones diferenciales de segundo orden:</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.3</strong></span> Consideremos el sistema de dos ecuaciones diferenciales de segundo orden:</p>
 <p><span class="math display">\[
 \begin{cases}
 y'' + x = 0\\[6pt]
@@ -477,7 +493,7 @@ x_2' &amp;= x'' = -y = -y_1
 <h2 class="anchored" data-anchor-id="sistemas-lineales-de-dimensión-n">Sistemas Lineales de dimensión <span class="math inline">\(n\)</span></h2>
 <p>Un sistema lineal es el sistema formado por ecuaciones lineales:</p>
 <div id="def-sistema-lineal" class="theorem definition">
-<p><span class="theorem-title"><strong>Definición 4.3 (Sistema lineal)</strong></span> Un <strong>sistema de ecuaciones lineales de primer orden</strong> es aquel en el que las funciones <span class="math inline">\(f_1, \dots, f_n\)</span> son lineales en las variables <span class="math inline">\(y_1, \dots, y_n\)</span>. La forma general de estos sistemas es:</p>
+<p><span class="theorem-title"><strong>Definición 5.3 (Sistema lineal)</strong></span> Un <strong>sistema de ecuaciones lineales de primer orden</strong> es aquel en el que las funciones <span class="math inline">\(f_1, \dots, f_n\)</span> son lineales en las variables <span class="math inline">\(y_1, \dots, y_n\)</span>. La forma general de estos sistemas es:</p>
 <p><span id="eq-sistema-lineal"><span class="math display">\[
 \begin{cases}
 \dfrac{dy_1}{dx} = a_{11}(x)y_1 + a_{12}(x)y_2 + \cdots + a_{1n}(x)y_n + b_1(x)\\[6pt]
@@ -485,7 +501,7 @@ x_2' &amp;= x'' = -y = -y_1
 \vdots\\[6pt]
 \dfrac{dy_n}{dx} = a_{n1}(x)y_1 + a_{n2}(x)y_2 + \cdots + a_{nn}(x)y_n + b_n(x)
 \end{cases}
-\tag{4.3}\]</span></span></p>
+\tag{5.3}\]</span></span></p>
 <p>donde las funciones <span class="math inline">\(a_{ij}\)</span> y <span class="math inline">\(b_i\)</span>, con <span class="math inline">\(i, j = 1, 2, \dots, n\)</span>, son funciones continuas en un cierto intervalo <span class="math inline">\(I\subset\mathbb{R}\)</span>.</p>
 <p>Además, si <span class="math inline">\(b_1 = b_2 = \cdots = b_n \equiv 0\)</span>, el sistema se dice que es <strong>homogéneo</strong>; en caso contrario se dice que es <strong>no homogéneo</strong>.</p>
 </div>
@@ -519,11 +535,11 @@ b_2(x) \\
 \vdots \\
 b_n(x)
 \end{pmatrix}
-\tag{4.4}\]</span></span></p>
+\tag{5.4}\]</span></span></p>
 <p>Identificando la función vectorial <span class="math inline">\(\mathbf{y}(x) = \bigl(y_1(x), \dots, y_n(x)\bigr)\)</span> con el vector columna correspondiente, la expresión anterior se reduce a la forma compacta:</p>
 <p><span id="eq-sistema-vectorial"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y} + \mathbf{b}(x)
-\tag{4.5}\]</span></span></p>
+\tag{5.5}\]</span></span></p>
 <p>donde <span class="math inline">\(\mathbf{A}(x)\)</span> es la matriz <span class="math inline">\(n \times n\)</span> de coeficientes</p>
 <p><span class="math display">\[
 \mathbf{A}(x) =
@@ -550,7 +566,7 @@ a_{n1}(x) &amp; a_{n2}(x) &amp; \cdots &amp; a_{nn}(x)
 \]</span></p>
 <p>Derivando sucesivamente la primera ecuación y sustituyendo las demás ecuaciones del sistema, se puede eliminar las variables <span class="math inline">\(y_2, \dots, y_n\)</span> y obtener una ecuación diferencial de orden <span class="math inline">\(n\)</span> en la variable <span class="math inline">\(y_1\)</span>. Una vez resuelta esta ecuación, las demás variables se recuperan por derivación y sustitución.</p>
 <div id="exm-sistema-a-orden-superior" class="theorem example" data-title="Ejemplo: Sistema de dos ecuaciones">
-<p><span class="theorem-title"><strong>Ejemplo 4.4</strong></span> Convertir el siguiente sistema lineal a una ecuación de orden superior:</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.4</strong></span> Convertir el siguiente sistema lineal a una ecuación de orden superior:</p>
 <p><span class="math display">\[
 \begin{cases}
 \dfrac{dy_1}{dx} = y_2\\[6pt]
@@ -579,7 +595,7 @@ y_2(x) = y_1'(x) = -C_1 \sin(x) + C_2 \cos(x)
 </div>
 </div>
 <div id="exm-sistema-3x3-a-orden-superior" class="theorem example" data-title="Ejemplo: sistema de tres ecuaciones">
-<p><span class="theorem-title"><strong>Ejemplo 4.5</strong></span> Convertir el siguiente sistema lineal de tres ecuaciones en una ecuación diferencial de orden superior:</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.5</strong></span> Convertir el siguiente sistema lineal de tres ecuaciones en una ecuación diferencial de orden superior:</p>
 <p><span class="math display">\[
 \begin{cases}
 x' = y, \\[6pt]
@@ -621,10 +637,10 @@ x''' + x = 0.
 <h4 class="anchored" data-anchor-id="principio-de-superposición">Principio de superposición</h4>
 <p>El <strong>principio de superposición</strong> garantiza que el conjunto de soluciones de un sistema lineal homogéneo es cerrado bajo combinaciones lineales. Esto implica que las soluciones forman un <strong>espacio vectorial</strong>: cualquier combinación lineal de soluciones es también solución. En consecuencia, el conjunto de soluciones constituye un <strong>subespacio vectorial de</strong> <span class="math inline">\(C^1(I, \mathbb{R}^n)\)</span>, el espacio de las funciones de clase <span class="math inline">\(C^1\)</span> definidas en <span class="math inline">\(I \subset \mathbb{R}\)</span> y con valores en <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
 <div id="thm-superposicion" class="theorem" title="Principio de superposición">
-<p><span class="theorem-title"><strong>Teorema 4.1 (Principio de superposición)</strong></span> Si <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_m\)</span> son soluciones del sistema lineal homogéneo</p>
+<p><span class="theorem-title"><strong>Teorema 5.1 (Principio de superposición)</strong></span> Si <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_m\)</span> son soluciones del sistema lineal homogéneo</p>
 <p><span id="eq-sistema-homogeneo"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}
-\tag{4.6}\]</span></span></p>
+\tag{5.6}\]</span></span></p>
 <p>en un intervalo <span class="math inline">\(I\)</span> y <span class="math inline">\(c_1, \dots, c_m \in \mathbb{R}\)</span>, entonces la combinación lineal</p>
 <p><span class="math display">\[
 \mathbf{y} = c_1\mathbf{y}_1 + \cdots + c_m\mathbf{y}_m
@@ -658,17 +674,17 @@ x''' + x = 0.
 <section id="dependencia-e-independencia-lineal" class="level5">
 <h5 class="anchored" data-anchor-id="dependencia-e-independencia-lineal">Dependencia e independencia lineal</h5>
 <div id="def-dependencia-lineal" class="theorem definition" title="Dependencia e independencia lineal">
-<p><span class="theorem-title"><strong>Definición 4.4 (Dependencia lineal)</strong></span> Un conjunto de funciones vectoriales <span class="math inline">\(\{\mathbf{y}_1, \dots, \mathbf{y}_n\}\)</span> se dice que es <strong>linealmente dependiente</strong> en un intervalo <span class="math inline">\(I\)</span> si existen constantes reales <span class="math inline">\(c_1, \dots, c_n\)</span>, no todas nulas, tales que</p>
+<p><span class="theorem-title"><strong>Definición 5.4 (Dependencia lineal)</strong></span> Un conjunto de funciones vectoriales <span class="math inline">\(\{\mathbf{y}_1, \dots, \mathbf{y}_n\}\)</span> se dice que es <strong>linealmente dependiente</strong> en un intervalo <span class="math inline">\(I\)</span> si existen constantes reales <span class="math inline">\(c_1, \dots, c_n\)</span>, no todas nulas, tales que</p>
 <p><span id="eq-dependencia-lineal"><span class="math display">\[
 c_1\mathbf{y}_1(x) + \cdots + c_n\mathbf{y}_n(x) = \mathbf{0}
-\tag{4.7}\]</span></span></p>
+\tag{5.7}\]</span></span></p>
 <p>para todo <span class="math inline">\(x \in I\)</span>. Si el conjunto de funciones no es linealmente dependiente se dice que es <strong>linealmente independiente</strong>.</p>
 </div>
 </section>
 <section id="wronskiano" class="level5">
 <h5 class="anchored" data-anchor-id="wronskiano">Wronskiano</h5>
 <div id="def-wronskiano" class="theorem definition" title="Wronskiano">
-<p><span class="theorem-title"><strong>Definición 4.5</strong></span> Dadas <span class="math inline">\(n\)</span> funciones vectoriales <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_n\)</span>,</p>
+<p><span class="theorem-title"><strong>Definición 5.5</strong></span> Dadas <span class="math inline">\(n\)</span> funciones vectoriales <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_n\)</span>,</p>
 <p><span class="math display">\[
 \mathbf{y}_j = (y_{1j}, \dots, y_{nj}), \quad j = 1, \dots, n,
 \]</span></p>
@@ -688,7 +704,7 @@ y_{n1} &amp; y_{n2} &amp; \cdots &amp; y_{nn}
 <h5 class="anchored" data-anchor-id="wronskiano-y-dependencia-lineal">Wronskiano y dependencia lineal</h5>
 <p>La relación más sencilla entre dependencia lineal y el wronskiano es que soluciones linealmente dependientes entonces el Wronskiano se anula en todo el intervalo.</p>
 <div id="prp-wronskiano-dependencia" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposición 4.2 (Wronskiano y dependencia lineal)</strong></span> Sean <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_n\)</span> funciones vectoriales derivables en un intervalo <span class="math inline">\(I\)</span> entonces:</p>
+<p><span class="theorem-title"><strong>Proposición 5.2 (Wronskiano y dependencia lineal)</strong></span> Sean <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_n\)</span> funciones vectoriales derivables en un intervalo <span class="math inline">\(I\)</span> entonces:</p>
 <p><span class="math display">\[
 \mathbf{y}_1, \dots, \mathbf{y}_n \text{ son linealmente dependientes} \Rightarrow W(x) \equiv 0
 \]</span></p>
@@ -709,10 +725,10 @@ c_1\mathbf{y}_1(x)+\cdots+c_n\mathbf{y}_n(x)=\mathbf{0}\quad \text{para todo } x
 <section id="teorema-de-abel" class="level5">
 <h5 class="anchored" data-anchor-id="teorema-de-abel">Teorema de Abel</h5>
 <div id="thm-abel" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.2 (Teorema de Abel)</strong></span> Si <span class="math inline">\(\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}\)</span> son soluciones del sistema lineal homogéneo</p>
+<p><span class="theorem-title"><strong>Teorema 5.2 (Teorema de Abel)</strong></span> Si <span class="math inline">\(\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}\)</span> son soluciones del sistema lineal homogéneo</p>
 <p><span id="eq-sistema-abel"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}
-\tag{4.8}\]</span></span></p>
+\tag{5.8}\]</span></span></p>
 <p>en un intervalo en un intervalo <span class="math inline">\(I\)</span>, entonces el wronskiano <span class="math inline">\(W(x) = W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}]\)</span> o bien es idénticamente nulo o bien nunca se anula en dicho intervalo.</p>
 <div class="proof">
 <p><span class="proof-title"><em>Demostración</em>. </span>La regla de Jacobi permite evaluar la derivada del determinante: <span class="math display">\[
@@ -724,7 +740,7 @@ c_1\mathbf{y}_1(x)+\cdots+c_n\mathbf{y}_n(x)=\mathbf{0}\quad \text{para todo } x
 = W\,\operatorname{tr}\!\bigl(X'(x)\,X(x)^{-1}\bigr)
 = W\,\operatorname{tr}\!\bigl(A \, X(x) \, X(x)^{-1}\bigr)
 = W\,\operatorname{tr}\!\bigl(A\bigr)
-\tag{4.9}\]</span></span></p>
+\tag{5.9}\]</span></span></p>
 <p>Definiendo <span class="math inline">\(p(x) = \text{tr}(\mathbf{A}(x))\)</span>, la ecuación anterior es una ecuación diferencial lineal de primer orden</p>
 <p><span class="math display">\[
 \frac{dW}{dx} = p(x) W
@@ -732,13 +748,13 @@ c_1\mathbf{y}_1(x)+\cdots+c_n\mathbf{y}_n(x)=\mathbf{0}\quad \text{para todo } x
 <p>cuya solución general es</p>
 <p><span id="eq-formula-abel"><span class="math display">\[
 W(x) = c \exp\left(\int p(x)\, dx\right) = c \exp\left(\int \text{tr}(\mathbf{A}(x))\, dx\right)
-\tag{4.10}\]</span></span></p>
+\tag{5.10}\]</span></span></p>
 <p>donde <span class="math inline">\(c\)</span> es una constante.</p>
 <p>Esta ecuación conocida como <strong>fórmula de Abel</strong> demuestra que el wronskiano o bien es idénticamente nulo o bien nunca se anula en el intervalo.</p>
 </div>
 </div>
 <div id="cor-criterio-wronskiano" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolario 4.1 (Criterio del Wronskiano para dependencia e independencia lineal)</strong></span> Si <span class="math inline">\(y_1, \dots, y_n\)</span> son soluciones de la misma ecuación diferencial lineal homogénea entonces:</p>
+<p><span class="theorem-title"><strong>Corolario 5.1 (Criterio del Wronskiano para dependencia e independencia lineal)</strong></span> Si <span class="math inline">\(y_1, \dots, y_n\)</span> son soluciones de la misma ecuación diferencial lineal homogénea entonces:</p>
 <p><span class="math display">\[
 \begin{aligned}
 W(x_0)\neq 0 &amp;\iff \text{linealmente independientes en todo } I,\\[6pt]
@@ -746,7 +762,7 @@ W(x_0)=0 &amp;\iff \text{linealmente dependientes en todo } I.
 \end{aligned}
 \]</span></p>
 <div class="proof">
-<p><span class="proof-title"><em>Demostración</em>. </span>La demostración se basa en el Teorema de Abel <a href="#thm-abel" class="quarto-xref">Teorema&nbsp;<span>4.2</span></a> y en un paso adicional que garantiza que <span class="math inline">\(W \equiv 0 \Rightarrow\)</span> dependencia lineal global, ya que por unicidad de soluciones los coeficientes de combinación deben ser constantes.</p>
+<p><span class="proof-title"><em>Demostración</em>. </span>La demostración se basa en el Teorema de Abel <a href="#thm-abel" class="quarto-xref">Teorema&nbsp;<span>5.2</span></a> y en un paso adicional que garantiza que <span class="math inline">\(W \equiv 0 \Rightarrow\)</span> dependencia lineal global, ya que por unicidad de soluciones los coeficientes de combinación deben ser constantes.</p>
 <p>Por el Teorema de Abel, si <span class="math inline">\(y_1, \dots, y_n\)</span> son soluciones del sistema lineal homogéneo, entonces <span class="math inline">\(W(x)\)</span> o bien es idénticamente nulo o bien nunca se anula. Por tanto:</p>
 <ul>
 <li><p>Si <span class="math inline">\(W(x_0) \neq 0\)</span> en algún punto <span class="math inline">\(x_0 \in I\)</span>, entonces <span class="math inline">\(W(x) \neq 0\)</span> para todo <span class="math inline">\(x \in I\)</span>, lo que implica que las funciones son linealmente independientes en todo el intervalo.</p></li>
@@ -758,13 +774,13 @@ W(x_0)=0 &amp;\iff \text{linealmente dependientes en todo } I.
 </div>
 </div>
 <div id="thm-sistema-fundamental" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.3 (Existencia de un sistema fundamental de soluciones (matriz identidad como base))</strong></span> Existen <span class="math inline">\(n\)</span> soluciones linealmente independientes (una por cada condición inicial base), por tanto, el espacio de soluciones tiene dimensión <span class="math inline">\(n\)</span>.</p>
+<p><span class="theorem-title"><strong>Teorema 5.3 (Existencia de un sistema fundamental de soluciones (matriz identidad como base))</strong></span> Existen <span class="math inline">\(n\)</span> soluciones linealmente independientes (una por cada condición inicial base), por tanto, el espacio de soluciones tiene dimensión <span class="math inline">\(n\)</span>.</p>
 <div class="proof">
 <p><span class="proof-title"><em>Demostración</em>. </span>Para demostrar la existencia de <span class="math inline">\(n\)</span> soluciones linealmente independientes, se construye un conjunto de soluciones particulares mediante condiciones iniciales específicas.</p>
 <p>Sea <span class="math inline">\(x_0 \in I\)</span> un punto fijo. Para cada <span class="math inline">\(j = 1, 2, \dots, n\)</span>, se considera el problema de valor inicial:</p>
 <p><span id="eq-pvi-base"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}, \quad \mathbf{y}(x_0) = \mathbf{e}_j
-\tag{4.11}\]</span></span></p>
+\tag{5.11}\]</span></span></p>
 <p>donde <span class="math inline">\(\mathbf{e}_j\)</span> es el <span class="math inline">\(j\)</span>-ésimo vector de la base canónica de <span class="math inline">\(\mathbb{R}^n\)</span>:</p>
 <p><span class="math display">\[
 \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \quad
@@ -784,7 +800,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 = \det(\mathbf{I}_n) = 1 \neq 0.
 \]</span></p>
 <p>donde <span class="math inline">\(\mathbf{I}_n\)</span> es la matriz identidad de orden <span class="math inline">\(n\)</span>.</p>
-<p>Dado que <span class="math inline">\(W(x_0) = 1 \neq 0\)</span>, por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>4.1</span></a>), las soluciones <span class="math inline">\(\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}\)</span> son linealmente independientes en todo el intervalo <span class="math inline">\(I\)</span>.</p>
+<p>Dado que <span class="math inline">\(W(x_0) = 1 \neq 0\)</span>, por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>5.1</span></a>), las soluciones <span class="math inline">\(\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}\)</span> son linealmente independientes en todo el intervalo <span class="math inline">\(I\)</span>.</p>
 <p>Por lo tanto, hemos construido un conjunto de <span class="math inline">\(n\)</span> soluciones linealmente independientes del sistema homogéneo, lo que demuestra que el espacio de soluciones tiene dimensión <span class="math inline">\(n\)</span>.</p>
 </div>
 </div>
@@ -797,10 +813,10 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <section id="estructura-de-espacio-afín" class="level4">
 <h4 class="anchored" data-anchor-id="estructura-de-espacio-afín">Estructura de espacio afín</h4>
 <div id="thm-solucion-general-no-homogeneo" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.4 (Estructura de la solución general)</strong></span> Si <span class="math inline">\(\mathbf{y}_p\)</span> es una solución particular del sistema lineal</p>
+<p><span class="theorem-title"><strong>Teorema 5.4 (Estructura de la solución general)</strong></span> Si <span class="math inline">\(\mathbf{y}_p\)</span> es una solución particular del sistema lineal</p>
 <p><span id="eq-sistema-no-homogeneo"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y} + \mathbf{b}(x)
-\tag{4.12}\]</span></span></p>
+\tag{5.12}\]</span></span></p>
 <p>en un intervalo <span class="math inline">\(I\)</span> y <span class="math inline">\(\mathbf{y}_h\)</span> es una solución del sistema lineal homogéneo asociado</p>
 <p><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y},
@@ -808,18 +824,18 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <p>entonces</p>
 <p><span id="eq-solucion-general-nh"><span class="math display">\[
 \mathbf{y} = \mathbf{y}_h + \mathbf{y}_p
-\tag{4.13}\]</span></span></p>
+\tag{5.13}\]</span></span></p>
 <p>es también una solución de del sistema no hómogeneo en <span class="math inline">\(I\)</span>.</p>
 </div>
 <div id="cor-solucion-general-sistema" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolario 4.2 (Solución general del sistema no homogéneo)</strong></span> Si <span class="math inline">\(\mathbf{y}_p\)</span> es una solución particular del sistema lineal no homogéneo</p>
+<p><span class="theorem-title"><strong>Corolario 5.2 (Solución general del sistema no homogéneo)</strong></span> Si <span class="math inline">\(\mathbf{y}_p\)</span> es una solución particular del sistema lineal no homogéneo</p>
 <p><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y} + \mathbf{b}(x)
 \]</span></p>
 <p>en un intervalo <span class="math inline">\(I\)</span> y <span class="math inline">\(\mathbf{y}_1, \dots, \mathbf{y}_n\)</span> es un conjunto fundamental de soluciones, en el mismo intervalo, del sistema lineal homogéneo asociado, entonces la solución general del sistema en <span class="math inline">\(I\)</span> es</p>
 <p><span id="eq-solucion-general-completa"><span class="math display">\[
 \mathbf{y} = c_1\mathbf{y}_1 + \cdots + c_n\mathbf{y}_n + \mathbf{y}_p,
-\tag{4.14}\]</span></span></p>
+\tag{5.14}\]</span></span></p>
 <p>donde <span class="math inline">\(c_1, \dots, c_n\)</span> son constantes arbitrarias.</p>
 </div>
 </section>
@@ -827,7 +843,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <h4 class="anchored" data-anchor-id="relación-entre-espacios-afines-asociados">Relación entre espacios afines asociados</h4>
 <p>Las soluciones de sistemas con distintos términos no homogéneos forman espacios afines paralelos. Sumar sus soluciones particulares equivale a describir cómo estos espacios se desplazan unos respecto a otros. Por lo tanto, la combinación lineal de soluciones particulares define una correspondencia afín entre los respectivos conjuntos de soluciones.</p>
 <div id="thm-superposicion-no-homogeneo" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.5 (Principio de superposición para sistemas no homogéneos)</strong></span> Si para cada <span class="math inline">\(i = 1, 2, \dots, m\)</span> la función <span class="math inline">\(\mathbf{y}_i\)</span> es una solución del sistema lineal</p>
+<p><span class="theorem-title"><strong>Teorema 5.5 (Principio de superposición para sistemas no homogéneos)</strong></span> Si para cada <span class="math inline">\(i = 1, 2, \dots, m\)</span> la función <span class="math inline">\(\mathbf{y}_i\)</span> es una solución del sistema lineal</p>
 <p><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y} + \mathbf{b}_i(x)
 \]</span></p>
@@ -848,10 +864,10 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <h2 class="anchored" data-anchor-id="matriz-fundamental-de-soluciones">Matriz fundamental de soluciones</h2>
 <p>En la sección anterior se ha demostrado que el conjunto de las soluciones de un sistema lineal homogéneo de orden <span class="math inline">\(n\)</span> es un espacio vectorial de dimensión <span class="math inline">\(n\)</span>. Una base de dicho espacio vectorial se denomina <strong>conjunto fundamental de soluciones</strong>. La matriz formada por los vectores solución como columnas es de utilidad para resolver y demostrar propiedades de sistemas.</p>
 <div id="def-matriz-fundamental" class="theorem definition">
-<p><span class="theorem-title"><strong>Definición 4.6 (Matriz fundamental de soluciones)</strong></span> Una matriz <span class="math inline">\(\boldsymbol{\Phi}\)</span> es <strong>matriz fundamental</strong> del sistema lineal homogéneo de orden <span class="math inline">\(n\)</span></p>
+<p><span class="theorem-title"><strong>Definición 5.6 (Matriz fundamental de soluciones)</strong></span> Una matriz <span class="math inline">\(\boldsymbol{\Phi}\)</span> es <strong>matriz fundamental</strong> del sistema lineal homogéneo de orden <span class="math inline">\(n\)</span></p>
 <p><span id="eq-sistema-matriz-fundamental"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}
-\tag{4.15}\]</span></span></p>
+\tag{5.15}\]</span></span></p>
 <p>en un intervalo <span class="math inline">\(I\)</span>, si sus columnas constituyen un conjunto fundamental de soluciones del sistema en dicho intervalo.</p>
 </div>
 <section id="caracterización-de-la-matriz-fundamental" class="level4">
@@ -862,10 +878,10 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 \]</span></p>
 <p>Por lo tanto se pueden aplicar los resultados del Wronskiano para caracterizar la matriz fundamental.</p>
 <div id="thm-caracterizacion-matriz-fundamental" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.6 (Caracterización de matriz fundamental)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz cuadrada cuyas columnas son soluciones del sistema</p>
+<p><span class="theorem-title"><strong>Teorema 5.6 (Caracterización de matriz fundamental)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz cuadrada cuyas columnas son soluciones del sistema</p>
 <p><span id="eq-sistema-caracterizacion"><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}
-\tag{4.16}\]</span></span></p>
+\tag{5.16}\]</span></span></p>
 <p>en un intervalo <span class="math inline">\(I\)</span>. Las siguientes condiciones son equivalentes:</p>
 <ol type="1">
 <li>La matriz <span class="math inline">\(\boldsymbol{\Phi}\)</span> es una matriz fundamental del sistema en <span class="math inline">\(I\)</span>.</li>
@@ -874,9 +890,9 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 </ol>
 <div class="proof">
 <p><span class="proof-title"><em>Demostración</em>. </span>Se demuestra la equivalencia demostrando un sentido de la implicación de manera circular <span class="math inline">\(1. \Rightarrow 2. \Rightarrow 3. \Rightarrow 1.\)</span></p>
-<p><span class="math inline">\(1. \Rightarrow 2.\)</span>: Si <span class="math inline">\(\boldsymbol{\Phi}\)</span> es una matriz fundamental, sus columnas forman un conjunto fundamental de soluciones, por lo que son linealmente independientes. Por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>4.1</span></a>), existe <span class="math inline">\(x_0 \in I\)</span> tal que <span class="math inline">\(W(x_0) = \det(\boldsymbol{\Phi}(x_0)) \neq 0\)</span>.</p>
-<p><span class="math inline">\(2. \Rightarrow 3.\)</span>: Por el Teorema de Abel (<a href="#thm-abel" class="quarto-xref">Teorema&nbsp;<span>4.2</span></a>), si el wronskiano es no nulo en un punto, entonces no se anula en todo el intervalo.</p>
-<p><span class="math inline">\(3. \Rightarrow 1.\)</span>: Si <span class="math inline">\(\det(\boldsymbol{\Phi})\)</span> no se anula en <span class="math inline">\(I\)</span>, entonces <span class="math inline">\(W[\mathbf{y}_1, \dots, \mathbf{y}_n] \neq 0\)</span> en todo <span class="math inline">\(I\)</span>. Por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>4.1</span></a>), las columnas de <span class="math inline">\(\boldsymbol{\Phi}\)</span> son linealmente independientes y, por tanto, forman un conjunto fundamental de soluciones.</p>
+<p><span class="math inline">\(1. \Rightarrow 2.\)</span>: Si <span class="math inline">\(\boldsymbol{\Phi}\)</span> es una matriz fundamental, sus columnas forman un conjunto fundamental de soluciones, por lo que son linealmente independientes. Por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>5.1</span></a>), existe <span class="math inline">\(x_0 \in I\)</span> tal que <span class="math inline">\(W(x_0) = \det(\boldsymbol{\Phi}(x_0)) \neq 0\)</span>.</p>
+<p><span class="math inline">\(2. \Rightarrow 3.\)</span>: Por el Teorema de Abel (<a href="#thm-abel" class="quarto-xref">Teorema&nbsp;<span>5.2</span></a>), si el wronskiano es no nulo en un punto, entonces no se anula en todo el intervalo.</p>
+<p><span class="math inline">\(3. \Rightarrow 1.\)</span>: Si <span class="math inline">\(\det(\boldsymbol{\Phi})\)</span> no se anula en <span class="math inline">\(I\)</span>, entonces <span class="math inline">\(W[\mathbf{y}_1, \dots, \mathbf{y}_n] \neq 0\)</span> en todo <span class="math inline">\(I\)</span>. Por el Criterio del Wronskiano (<a href="#cor-criterio-wronskiano" class="quarto-xref">Corolario&nbsp;<span>5.1</span></a>), las columnas de <span class="math inline">\(\boldsymbol{\Phi}\)</span> son linealmente independientes y, por tanto, forman un conjunto fundamental de soluciones.</p>
 </div>
 </div>
 </section>
@@ -884,7 +900,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <h4 class="anchored" data-anchor-id="relación-entre-matrices-fundamentales">Relación entre matrices fundamentales</h4>
 <p>Dado que un conjunto fundamental de soluciones es una base del espacio de soluciones, es natural suponer que cualquier otra colección de soluciones se describa mediante un cambio de base. El siguiente resultado formaliza esta correspondencia.</p>
 <div id="prp-relacion-matrices-fundamentales" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposición 4.3 (Relación entre matrices fundamentales)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz fundamental del sistema</p>
+<p><span class="theorem-title"><strong>Proposición 5.3 (Relación entre matrices fundamentales)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz fundamental del sistema</p>
 <p><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}.
 \]</span></p>
@@ -911,7 +927,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 =
 (\,\mathbf{y}_1(x),\,\mathbf{y}_2(x),\,\dots,\,\mathbf{y}_n(x)\,).
 \]</span></p>
-<p>Además las columnas son linealmente independientes. Por el teorema de caracterización de matrices fundamentales (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>4.6</span></a>)Dado <span class="math inline">\(\det(\boldsymbol{\Phi}(x)) \neq 0\)</span> (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>4.6</span></a>). Por tanto, aplicando la propiedad del producto de determinantes <span class="math display">\[
+<p>Además las columnas son linealmente independientes. Por el teorema de caracterización de matrices fundamentales (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>5.6</span></a>)Dado <span class="math inline">\(\det(\boldsymbol{\Phi}(x)) \neq 0\)</span> (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>5.6</span></a>). Por tanto, aplicando la propiedad del producto de determinantes <span class="math display">\[
 \det(\boldsymbol{\Phi}(x)\mathbf{C}) =
 \det(\boldsymbol{\Phi}(x)) \cdot \det(\mathbf{C})
 \neq 0
@@ -938,14 +954,14 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 </div>
 <p>La matriz fundamental proporciona una expresión explícita para la solución de un problema de valores iniciales.</p>
 <div id="cor-solucion-pvi-matriz-fundamental" class="theorem corollary">
-<p><span class="theorem-title"><strong>Corolario 4.3 (Solución de problema de valor inicia)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz fundamental del sistema</p>
+<p><span class="theorem-title"><strong>Corolario 5.3 (Solución de problema de valor inicia)</strong></span> Sea <span class="math inline">\(\boldsymbol{\Phi}\)</span> una matriz fundamental del sistema</p>
 <p><span class="math display">\[
 \mathbf{y}' = \mathbf{A}(x)\mathbf{y}, \quad \mathbf{y}(x_0) = \mathbf{y}_0
 \]</span></p>
 <p>la solución del sistema es:</p>
 <p><span id="eq-solucion-pvi-matriz"><span class="math display">\[
 \mathbf{y}(x) = \boldsymbol{\Phi}(x)\bigl[\boldsymbol{\Phi}(x_0)\bigr]^{-1}\mathbf{y}_0.
-\tag{4.17}\]</span></span></p>
+\tag{5.17}\]</span></span></p>
 <div class="proof">
 <p><span class="proof-title"><em>Demostración</em>. </span>Como <span class="math inline">\(\boldsymbol{\Phi}\)</span> es una matriz fundamental, sus columnas forman un conjunto fundamental de soluciones del sistema homogéneo. Por tanto, la solución general del sistema se puede expresar como</p>
 <p><span class="math display">\[
@@ -981,7 +997,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 \]</span></p>
 <p>se buscan soluciones de la forma <span class="math inline">\(\mathbf{y}(x)=e^{\lambda x}\,\mathbf{v}\)</span>, con <span class="math inline">\(\lambda\in\mathbb{R}\)</span> y <span class="math inline">\(\mathbf{v}\in\mathbb{R}^n\)</span> constante. Esta suposición reduce el problema diferencial a un problema algebraico parecido a la diagonalización de matrices.</p>
 <div id="prp-autovalores-soluciones" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposición 4.4 (Solución exponencial y autovalores)</strong></span> Sea <span class="math inline">\(\mathbf{A}\in\mathbb{R}^{n\times n}\)</span> una función de la forma <span class="math inline">\(\mathbf{y}(x)=e^{\lambda x}\,\mathbf{v}\)</span>, con <span class="math inline">\(\mathbf{v}\neq \mathbf{0}\)</span>, es solución del sistema homogéneo <span class="math display">\[
+<p><span class="theorem-title"><strong>Proposición 5.4 (Solución exponencial y autovalores)</strong></span> Sea <span class="math inline">\(\mathbf{A}\in\mathbb{R}^{n\times n}\)</span> una función de la forma <span class="math inline">\(\mathbf{y}(x)=e^{\lambda x}\,\mathbf{v}\)</span>, con <span class="math inline">\(\mathbf{v}\neq \mathbf{0}\)</span>, es solución del sistema homogéneo <span class="math display">\[
 \mathbf{y}' = \mathbf{A}\,\mathbf{y}
 \]</span> si y sólo si <span class="math inline">\(\lambda\)</span> es un autovalor de <span class="math inline">\(\mathbf{A}\)</span> y <span class="math inline">\(\mathbf{v}\)</span> un autovector asociado, esto es <span class="math display">\[
 \mathbf{A}\,\mathbf{v} = \lambda\,\mathbf{v}.
@@ -1002,7 +1018,7 @@ W[\mathbf{y}^{(1)}, \dots, \mathbf{y}^{(n)}](x_0)
 <h5 class="anchored" data-anchor-id="número-de-autovectores-coincide-con-la-dimensión-del-sistema-n">Número de autovectores coincide con la dimensión del sistema (<span class="math inline">\(n\)</span>)</h5>
 <p>El caso más sencillo, si hay <span class="math inline">\(n\)</span> autovectores distintos estos formarán el conjunto fundamental de soluciones <span class="math inline">\(e^{\lambda_1 x}\mathbf{v}_1, e^{\lambda_2 x}\mathbf{v}_2,\dots,e^{\lambda_n x}\mathbf{v}_n\)</span>. Si los autovalores son distintos entonces siempre se cumple. Si hay algún vector <span class="math inline">\(\lambda_i\)</span> con multiplicidad algebraica mayor que uno, dependerá de la multiplicidad geométrica que es por definición la dimensión del del subespacio proprio. Si las dos coinciden, también se cumple este caso.</p>
 <div id="thm-autovalores-distintos" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.7 (Soluciones para autovalores con multiplicidad algebraica igual a la geométrica)</strong></span> Si la matriz <span class="math inline">\(\mathbf{A}\)</span> tiene <span class="math inline">\(n\)</span> autovalores reales y <span class="math inline">\(n\)</span> autovectores correspondientes <span class="math inline">\(\lambda_1,\lambda_2,\dots,\lambda_n\)</span>, y <span class="math inline">\(\mathbf{v}_1,\dots,\mathbf{v}_n\)</span>, entonces las funciones</p>
+<p><span class="theorem-title"><strong>Teorema 5.7 (Soluciones para autovalores con multiplicidad algebraica igual a la geométrica)</strong></span> Si la matriz <span class="math inline">\(\mathbf{A}\)</span> tiene <span class="math inline">\(n\)</span> autovalores reales y <span class="math inline">\(n\)</span> autovectores correspondientes <span class="math inline">\(\lambda_1,\lambda_2,\dots,\lambda_n\)</span>, y <span class="math inline">\(\mathbf{v}_1,\dots,\mathbf{v}_n\)</span>, entonces las funciones</p>
 <p><span class="math display">\[
 e^{\lambda_1 x}\mathbf{v}_1,\,
 e^{\lambda_2 x}\mathbf{v}_2,\,
@@ -1014,7 +1030,7 @@ e^{\lambda_n x}\mathbf{v}_n
 \mathbf{y}' = \mathbf{A}\mathbf{y}.
 \]</span></p>
 <div class="proof">
-<p><span class="proof-title"><em>Demostración</em>. </span>Se ha visto en la proposición anterior (<a href="#prp-autovalores-soluciones" class="quarto-xref">Proposición&nbsp;<span>4.4</span></a>) que cada función <span class="math inline">\(e^{\lambda_i x}\mathbf{v}_i\)</span> es solución del sistema. Para comprobar que son linealmente independientes, basta encontrar un punto en el que el determinante de la matriz formada por dichas soluciones no se anule (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>4.6</span></a>).</p>
+<p><span class="proof-title"><em>Demostración</em>. </span>Se ha visto en la proposición anterior (<a href="#prp-autovalores-soluciones" class="quarto-xref">Proposición&nbsp;<span>5.4</span></a>) que cada función <span class="math inline">\(e^{\lambda_i x}\mathbf{v}_i\)</span> es solución del sistema. Para comprobar que son linealmente independientes, basta encontrar un punto en el que el determinante de la matriz formada por dichas soluciones no se anule (<a href="#thm-caracterizacion-matriz-fundamental" class="quarto-xref">Teorema&nbsp;<span>5.6</span></a>).</p>
 <p>Evaluando la matriz</p>
 <p><span class="math display">\[
 \boldsymbol{\Phi}(x)=
@@ -1035,7 +1051,7 @@ e^{\lambda_n x}\mathbf{v}_n
 </div>
 </div>
 <div id="exm-autovalores-2x2" class="example theorem" data-title="Ejemplo: autovalores distintos">
-<p><span class="theorem-title"><strong>Ejemplo 4.6</strong></span> Resolver el sistema homogéneo por el método de autovalores: <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejemplo 5.6</strong></span> Resolver el sistema homogéneo por el método de autovalores: <span class="math display">\[
 \mathbf{y}' = \begin{pmatrix}1 &amp; 1\\[2pt] 4 &amp; 1\end{pmatrix}\,\mathbf{y}.
 \]</span></p>
 <div class="proof solution">
@@ -1066,7 +1082,7 @@ c_2 e^{-x}\begin{pmatrix}1\\ -2\end{pmatrix},\qquad c_1,c_2\in\mathbb{R}.
 </div>
 </div>
 <div id="exm-autovalores-3x3" class="example theorem" data-title="Ejemplo: multiplicidad geometrica igual a la algebraica">
-<p><span class="theorem-title"><strong>Ejemplo 4.7</strong></span> Resolver el sistema homogéneo por el método de autovalores: <span class="math display">\[
+<p><span class="theorem-title"><strong>Ejemplo 5.7</strong></span> Resolver el sistema homogéneo por el método de autovalores: <span class="math display">\[
 \mathbf{y}' = \begin{pmatrix}9 &amp; 4 &amp; 0\\[2pt] -6 &amp; -1 &amp; 0\\[2pt] 6 &amp; 4 &amp; 3\end{pmatrix}\,\mathbf{y}.
 \]</span></p>
 <div class="proof solution">
@@ -1115,15 +1131,15 @@ c_2 e^{-x}\begin{pmatrix}1\\ -2\end{pmatrix},\qquad c_1,c_2\in\mathbb{R}.
 \mathbf{y}(x) = e^{\lambda x}(\mathbf{a}_0 + \mathbf{a}_1 x + \cdots + \mathbf{a}_{j-1}x^{j-1} + \mathbf{a}_jx^j),
 \]</span></p>
 <div id="thm-autovalores-repetidos" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 4.8 (Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica)</strong></span> Sea <span class="math inline">\(\lambda\)</span> un autovalor de <span class="math inline">\(A\)</span> con multiplicidad algebraica <span class="math inline">\(m\)</span> y multiplicidad geométrica <span class="math inline">\(d&lt;m\)</span>. Entonces existen <span class="math inline">\(m\)</span> soluciones linealmente independientes asociadas a <span class="math inline">\(\lambda\)</span> de la forma <span id="eq-solucion-autovalor-repetido"><span class="math display">\[
+<p><span class="theorem-title"><strong>Teorema 5.8 (Soluciones para autovalores con multiplicidad algebraica mayor que la geométrica)</strong></span> Sea <span class="math inline">\(\lambda\)</span> un autovalor de <span class="math inline">\(A\)</span> con multiplicidad algebraica <span class="math inline">\(m\)</span> y multiplicidad geométrica <span class="math inline">\(d&lt;m\)</span>. Entonces existen <span class="math inline">\(m\)</span> soluciones linealmente independientes asociadas a <span class="math inline">\(\lambda\)</span> de la forma <span id="eq-solucion-autovalor-repetido"><span class="math display">\[
 \mathbf{y}_j(x)=e^{\lambda x}\bigl(\mathbf{a}_0+\mathbf{a}_1 x+\cdots+\mathbf{a}_{j-1}x^{j-1}+\mathbf{a}_j x^j\bigr),
-\tag{4.18}\]</span></span></p>
+\tag{5.18}\]</span></span></p>
 <p>para <span class="math inline">\(j=0,1,\dots,m-1\)</span>, donde los vectores constantes <span class="math inline">\(\mathbf{a}_k\)</span> satisfacen el sistema <span id="eq-sistema-vectores-autovalor"><span class="math display">\[
 \begin{cases}
 (A-\lambda I)\mathbf{a}_{k-1}=k\mathbf{a}_k, &amp; k=1,2,\dots,j;\\[4pt]
 (A-\lambda I)\mathbf{a}_j=\mathbf{0}.
 \end{cases}
-\tag{4.19}\]</span></span></p>
+\tag{5.19}\]</span></span></p>
 <div class="proof">
 <p><span class="proof-title"><em>Demostración</em>. </span>Para que <span class="math inline">\(\mathbf{y}_j\)</span> sea solución del sistema <span class="math inline">\(\mathbf{y}'=A\mathbf{y}\)</span> se ha de cumplir <span class="math display">\[
 \mathbf{y}_j'=\lambda \mathbf{y}_j+e^{\lambda x}\bigl(\mathbf{a}_1+2\mathbf{a}_2x+\cdots+(j-1)\mathbf{a}_{j-1}x^{j-2}+j\mathbf{a}_jx^{j-1}\bigr)=A\mathbf{y}_j,
@@ -1143,7 +1159,7 @@ c_2 e^{-x}\begin{pmatrix}1\\ -2\end{pmatrix},\qquad c_1,c_2\in\mathbb{R}.
 &amp;\vdots\\[4pt]
 \mathbf{a}_k&amp;=\frac{1}{k}(A-\lambda I)\mathbf{a}_{k-1}=\frac{1}{k!}(A-\lambda I)^k\mathbf{a}_0
 \end{aligned}
-\tag{4.20}\]</span></span></p>
+\tag{5.20}\]</span></span></p>
 <p>Y la última <span class="math display">\[
 (A-\lambda I)\mathbf{a}_j=\mathbf{0}
 \]</span></p>
@@ -1152,14 +1168,14 @@ c_2 e^{-x}\begin{pmatrix}1\\ -2\end{pmatrix},\qquad c_1,c_2\in\mathbb{R}.
 (A-\lambda I)\mathbf{a}_{k-1}=k\mathbf{a}_k, &amp; k=1,2,\dots,j;\\[4pt]
 (A-\lambda I)\mathbf{a}_j=\mathbf{0}.
 \end{cases}
-\tag{4.21}\]</span></span></p>
-<p>Para que <span class="math inline">\(e^{\lambda x}\mathbf{y}_j\)</span> sea un polinomio de grado <span class="math inline">\(j\)</span> el coeficiente <span class="math inline">\(\mathbf{a}_j\)</span> ha de ser no nulo. Por lo tanto debe existir un vector <span class="math inline">\(\mathbf{a}_0\in\ker(A-\lambda I)^{j+1}\smallsetminus\ker(A-\lambda I)^j\)</span>. En este caso el vector <span class="math inline">\(\mathbf{a}_0\)</span> se define mediante las relaciones (<a href="#eq-coeficientes-recursivos" class="quarto-xref">Ecuación&nbsp;<span>4.20</span></a>).</p>
-<p>Resumiendo, la función (<a href="#eq-solucion-autovalor-repetido" class="quarto-xref">Ecuación&nbsp;<span>4.18</span></a>) es una solución de la ecuación (<a href="#eq-sistema-homogeneo" class="quarto-xref">Ecuación&nbsp;<span>4.6</span></a>) si, y sólo si, <span id="eq-condicion-a0"><span class="math display">\[
+\tag{5.21}\]</span></span></p>
+<p>Para que <span class="math inline">\(e^{\lambda x}\mathbf{y}_j\)</span> sea un polinomio de grado <span class="math inline">\(j\)</span> el coeficiente <span class="math inline">\(\mathbf{a}_j\)</span> ha de ser no nulo. Por lo tanto debe existir un vector <span class="math inline">\(\mathbf{a}_0\in\ker(A-\lambda I)^{j+1}\smallsetminus\ker(A-\lambda I)^j\)</span>. En este caso el vector <span class="math inline">\(\mathbf{a}_0\)</span> se define mediante las relaciones (<a href="#eq-coeficientes-recursivos" class="quarto-xref">Ecuación&nbsp;<span>5.20</span></a>).</p>
+<p>Resumiendo, la función (<a href="#eq-solucion-autovalor-repetido" class="quarto-xref">Ecuación&nbsp;<span>5.18</span></a>) es una solución de la ecuación (<a href="#eq-sistema-homogeneo" class="quarto-xref">Ecuación&nbsp;<span>5.6</span></a>) si, y sólo si, <span id="eq-condicion-a0"><span class="math display">\[
 \mathbf{a}_0\in\ker(A-\lambda I)^{j+1}\smallsetminus\ker(A-\lambda I)^j
-\tag{4.22}\]</span></span></p>
+\tag{5.22}\]</span></span></p>
 <p>y <span id="eq-formula-ak"><span class="math display">\[
 \mathbf{a}_k=\frac{1}{k!}(A-\lambda I)^k\mathbf{a}_0
-\tag{4.23}\]</span></span></p>
+\tag{5.23}\]</span></span></p>
 <p>para todo <span class="math inline">\(k=1,2,\dots,j\)</span>.</p>
 <p>Por último, queda pendiente definir <span class="math inline">\(j\)</span>. Sea <span class="math inline">\(d&gt;1\)</span> es tal que <span class="math display">\[
 \ker(A-\lambda I)^{d+1}=\ker(A-\lambda I)^d.
@@ -1174,15 +1190,15 @@ c_2 e^{-x}\begin{pmatrix}1\\ -2\end{pmatrix},\qquad c_1,c_2\in\mathbb{R}.
 (A-\lambda I)^{d-k-1}\mathbf{v}_k=(A-\lambda I)^{d-1}\mathbf{v}_0\neq\mathbf{0}
 \end{cases}
 \]</span></p>
-<p>luego <span class="math inline">\(\mathbf{v}_k\in\ker(A-\lambda I)^{d-k}\smallsetminus\ker(A-\lambda I)^{d-k-1}\)</span>. Se tiene entonces que, para <span class="math inline">\(j=0,\dots,d-1\)</span>, las condiciones (<a href="#eq-condicion-a0" class="quarto-xref">Ecuación&nbsp;<span>4.22</span></a>) y (<a href="#eq-formula-ak" class="quarto-xref">Ecuación&nbsp;<span>4.23</span></a>) se cumplen cuando <span class="math inline">\(\mathbf{a}_0=\mathbf{v}_{d-j-1}\)</span> y <span class="math inline">\(\mathbf{a}_1=\frac{1}{1!}\mathbf{v}_{d-j}\)</span>, por lo tanto, las funciones <span id="eq-soluciones-yj"><span class="math display">\[
+<p>luego <span class="math inline">\(\mathbf{v}_k\in\ker(A-\lambda I)^{d-k}\smallsetminus\ker(A-\lambda I)^{d-k-1}\)</span>. Se tiene entonces que, para <span class="math inline">\(j=0,\dots,d-1\)</span>, las condiciones (<a href="#eq-condicion-a0" class="quarto-xref">Ecuación&nbsp;<span>5.22</span></a>) y (<a href="#eq-formula-ak" class="quarto-xref">Ecuación&nbsp;<span>5.23</span></a>) se cumplen cuando <span class="math inline">\(\mathbf{a}_0=\mathbf{v}_{d-j-1}\)</span> y <span class="math inline">\(\mathbf{a}_1=\frac{1}{1!}\mathbf{v}_{d-j}\)</span>, por lo tanto, las funciones <span id="eq-soluciones-yj"><span class="math display">\[
 \mathbf{y}_j(x)=e^{\lambda x}\biggl(\mathbf{v}_{d-j-1}+\mathbf{v}_{d-j}\frac{x}{1!}+\cdots+\mathbf{v}_{d-2}\frac{x^{j-1}}{(j-1)!}+\mathbf{v}_{d-1}\frac{x^j}{j!}\biggr)
-\tag{4.24}\]</span></span></p>
-<p>son soluciones de (<a href="#eq-sistema-homogeneo" class="quarto-xref">Ecuación&nbsp;<span>4.6</span></a>).</p>
+\tag{5.24}\]</span></span></p>
+<p>son soluciones de (<a href="#eq-sistema-homogeneo" class="quarto-xref">Ecuación&nbsp;<span>5.6</span></a>).</p>
 </div>
 </div>
 <p>Este teorema demuestra como encontrar las soluciones. Hay que coger un polinomio de grado <span class="math inline">\(d\)</span> donde <span class="math inline">\(d\)</span> es el primer valor tal que <span class="math inline">\(\ker(A-\lambda I)^{d+1} = \ker(A-\lambda I)^d\)</span>. Además <span class="math inline">\(a_d \in \ker(A-\lambda I)^{d+1}=\ker(A-\lambda I)^d\)</span> y el resto de valores se definen recursivamente.</p>
 <div id="exm-autovalores-6x6" class="example theorem" data-title="Ejemplo: sistema 6x6">
-<p><span class="theorem-title"><strong>Ejemplo 4.8</strong></span> &nbsp;</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.8</strong></span> &nbsp;</p>
 <!-- ####### Ejemplo: Sistema $6\times 6$ con autovalor repetido -->
 <p>Resolver el sistema <span class="math inline">\(\mathbf{y}'=A\mathbf{y}\)</span> donde</p>
 <p><span class="math display">\[
@@ -1240,7 +1256,7 @@ A - 2I = \begin{pmatrix}
 <li><span class="math inline">\(\dim(\ker(A - 2I)^3) = 5\)</span></li>
 </ul>
 <p>Por tanto, <span class="math inline">\(d = 3\)</span> es el primer valor tal que <span class="math inline">\(\ker(A - 2I)^{d+1} = \ker(A - 2I)^d\)</span>.</p>
-<p>Esto implica que voy a tener dos soluciones de la forma <a href="#eq-soluciones-yj" class="quarto-xref">Ecuación&nbsp;<span>4.24</span></a>, un polinomio de grado uno y uno de grado dos.</p>
+<p>Esto implica que voy a tener dos soluciones de la forma <a href="#eq-soluciones-yj" class="quarto-xref">Ecuación&nbsp;<span>5.24</span></a>, un polinomio de grado uno y uno de grado dos.</p>
 <p><strong>Paso 4: Construcción de las soluciones</strong></p>
 <p>Hay que hallar <span class="math inline">\(v_0 \in \ker(A - 2I)^{3} \smallsetminus \ker(A - 2I)^2\)</span>.</p>
 <p>Definimos <span class="math inline">\(v_1 = (A-\lambda I) v_0\)</span> y <span class="math inline">\(v_2 = (A-\lambda I) v_1\)</span>.</p>
@@ -1257,7 +1273,7 @@ A - 2I = \begin{pmatrix}
 <h5 class="anchored" data-anchor-id="autovalores-complejos">Autovalores complejos</h5>
 <p>Ya se ha visto para ecuaciones lineales de orden superior que aunque el espacio de funciones sea complejo, se puede coger una base formada por funciones reales. Por lo tanto si <span class="math inline">\(\mathbb{y}\)</span> es solución, se puede coger como base <span class="math inline">\((Re(\mathbb{y}), Im(\mathbb{y}))\)</span></p>
 <div id="exm-autovalores-complejos" class="theorem example" data-title="Ejemplo: Autovalores complejos">
-<p><span class="theorem-title"><strong>Ejemplo 4.9</strong></span> Resolver el problema con valores iniciales</p>
+<p><span class="theorem-title"><strong>Ejemplo 5.9</strong></span> Resolver el problema con valores iniciales</p>
 <p><span id="eq-ejemplo-autovalores-complejos"><span class="math display">\[
 \mathbf{X}' = \begin{pmatrix}
 2 &amp; 8 \\
@@ -1267,7 +1283,7 @@ A - 2I = \begin{pmatrix}
 2 \\
 -1
 \end{pmatrix}
-\tag{4.25}\]</span></span></p>
+\tag{5.25}\]</span></span></p>
 <div class="proof solution">
 <p><span class="proof-title"><em>Solución</em>. </span><strong>Paso 1: Cálculo de autovalores</strong></p>
 <p>Primero se obtienen los autovalores a partir del polinomio característico:</p>
@@ -1323,7 +1339,7 @@ Im(e^{(\alpha + i \beta )x}) = Im(e^\alpha(\cos x + i \sin x))
 \mathbf{X} &amp;= c_1\left[\begin{pmatrix}2\\-1\end{pmatrix}\cos 2x - \begin{pmatrix}2\\0\end{pmatrix}\sin 2x\right] + c_2\left[\begin{pmatrix}2\\0\end{pmatrix}\cos 2x + \begin{pmatrix}2\\-1\end{pmatrix}\sin 2x\right] \\[6pt]
 &amp;= c_1\begin{pmatrix}2\cos 2x - 2\sin 2x \\ -\cos 2x\end{pmatrix} + c_2\begin{pmatrix}2\cos 2x + 2\sin 2x \\ -\sin 2x\end{pmatrix}
 \end{aligned}
-\tag{4.26}\]</span></span></p>
+\tag{5.26}\]</span></span></p>
 <p><strong>Paso 4: Aplicación de la condición inicial</strong></p>
 <p>La condición inicial <span class="math inline">\(\mathbf{X}(0) = \begin{pmatrix}2\\-1\end{pmatrix}\)</span> produce el sistema algebraico:</p>
 <p><span class="math display">\[
