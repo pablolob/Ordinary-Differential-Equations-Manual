@@ -255,6 +255,11 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../qmds/divulgacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Divulgación: curiosidades y aplicaciones</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../qmds/zz-herramientas.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Herramientas de visualización</span></a>
   </div>
 </li>
@@ -343,7 +348,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="eliminación-del-medicamento">1. Eliminación del medicamento</h2>
 <p>Sea <span class="math inline">\(C(t)\)</span> la concentración del fármaco en sangre, medida en mg/L. En ausencia de nuevas dosis, se supone que la tasa de eliminación es proporcional a la concentración presente. Al disminuir la concentración, también disminuye la tasa de eliminación.</p>
 <div id="exr-farmaco-modelo" class="theorem exercise" data-title="Formulación del modelo de eliminación">
-<p><span class="theorem-title"><strong>Ejercicio 12.1</strong></span> Formular la ecuación diferencial correspondiente. Determinar el signo de <span class="math inline">\(C'(t)\)</span> y las unidades de la constante de proporcionalidad.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.1</strong></span> Formular la ecuación diferencial correspondiente. Determinar el signo de <span class="math inline">\(C'(t)\)</span> y las unidades de la constante de proporcionalidad.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>Sea <span class="math inline">\(k&gt;0\)</span> la constante de eliminación. La tasa es <span class="math inline">\(-kC(t)\)</span> y, por tanto, <span class="math inline">\(C'(t)=-kC(t)\)</span>. Como <span class="math inline">\(C'\)</span> se mide en mg/(L·h), <span class="math inline">\(k\)</span> se mide en <span class="math inline">\(1/\mathrm h\)</span>.</p>
 </div>
@@ -351,9 +356,9 @@ window.Quarto = {
 <p>El modelo entre administraciones es, por tanto,</p>
 <p><span id="eq-farmaco-eliminacion"><span class="math display">\[
 \boxed{C'(t)=-kC(t),\qquad k&gt;0.}
-\tag{12.1}\]</span></span></p>
+\tag{13.1}\]</span></span></p>
 <div id="exr-farmaco-decaimiento" class="theorem exercise" data-title="Solución de la ecuación de eliminación">
-<p><span class="theorem-title"><strong>Ejercicio 12.2</strong></span> Resolver <a href="#eq-farmaco-eliminacion" class="quarto-xref">Ecuación&nbsp;<span>12.1</span></a> con <span class="math inline">\(C(t_0)=C_0&gt;0\)</span>. Determinar si la concentración puede llegar exactamente a cero en un tiempo finito.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.2</strong></span> Resolver <a href="#eq-farmaco-eliminacion" class="quarto-xref">Ecuación&nbsp;<span>13.1</span></a> con <span class="math inline">\(C(t_0)=C_0&gt;0\)</span>. Determinar si la concentración puede llegar exactamente a cero en un tiempo finito.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>La separación de variables da <span class="math inline">\(\mathrm dC/C=-k\,\mathrm dt\)</span>. Al integrar entre <span class="math inline">\(t_0\)</span> y <span class="math inline">\(t\)</span>, se obtiene <span class="math inline">\(\ln(C(t)/C_0)=-k(t-t_0)\)</span> y, por tanto,</p>
 <p><span class="math display">\[
@@ -364,7 +369,7 @@ C(t)=C_0e^{-k(t-t_0)}.
 </div>
 <p>La constante <span class="math inline">\(k\)</span> también puede expresarse mediante la <strong>vida media</strong> <span class="math inline">\(h\)</span>: el tiempo que tarda la concentración en reducirse a la mitad. Al sustituir <span class="math inline">\(C(t_0+h)=C_0/2\)</span> en la solución, se obtiene <span class="math inline">\(e^{-kh}=1/2\)</span> y, por tanto, <span class="math inline">\(k=\ln(2)/h\)</span>.</p>
 <div id="exr-farmaco-vida-media" class="theorem exercise" data-title="Interpretar la vida media">
-<p><span class="theorem-title"><strong>Ejercicio 12.3</strong></span> Demostrar que <span class="math inline">\(C(t_0+mh)=C_0 2^{-m}\)</span> para cualquier <span class="math inline">\(m\geq0\)</span>. Comparar la concentración que conservan, tras un mismo tiempo, dos fármacos con igual concentración inicial y distinta vida media.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.3</strong></span> Demostrar que <span class="math inline">\(C(t_0+mh)=C_0 2^{-m}\)</span> para cualquier <span class="math inline">\(m\geq0\)</span>. Comparar la concentración que conservan, tras un mismo tiempo, dos fármacos con igual concentración inicial y distinta vida media.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>Al sustituir <span class="math inline">\(k=\ln(2)/h\)</span> en la solución, <span class="math inline">\(C(t_0+mh)=C_0e^{-m\ln2}=C_0 2^{-m}\)</span>. Una vida media mayor corresponde a una eliminación más lenta y, con la misma concentración inicial, deja más concentración en cualquier tiempo posterior.</p>
 </div>
@@ -379,10 +384,10 @@ C(t)=C_0e^{-k(t-t_0)}.
 C'(t)=-kC(t), &amp; t\ne t_n,\\
 C(t_n^+)-C(t_n^-)=d, &amp; n=0,1,2,\ldots
 \end{cases}
-\tag{12.2}\]</span></span></p>
+\tag{13.2}\]</span></span></p>
 <p>Si <span class="math inline">\(C(0^-)=0\)</span>, justo después de la primera dosis la concentración es <span class="math inline">\(d\)</span>. Al cabo de <span class="math inline">\(T\)</span> horas permanece la fracción <span class="math inline">\(q=e^{-kT}\)</span> de ese valor. La segunda dosis eleva la concentración a <span class="math inline">\(dq+d\)</span>; la tercera se calcula del mismo modo.</p>
 <div id="exr-farmaco-tres-dosis" class="theorem exercise" data-title="Sucesión de concentraciones máximas">
-<p><span class="theorem-title"><strong>Ejercicio 12.4</strong></span> Calcular la concentración justo después de las dosis en <span class="math inline">\(0\)</span>, <span class="math inline">\(T\)</span> y <span class="math inline">\(2T\)</span>. Definir <span class="math inline">\(P_n=C(nT^+)\)</span> y deducir una regla que relacione <span class="math inline">\(P_{n+1}\)</span> con <span class="math inline">\(P_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.4</strong></span> Calcular la concentración justo después de las dosis en <span class="math inline">\(0\)</span>, <span class="math inline">\(T\)</span> y <span class="math inline">\(2T\)</span>. Definir <span class="math inline">\(P_n=C(nT^+)\)</span> y deducir una regla que relacione <span class="math inline">\(P_{n+1}\)</span> con <span class="math inline">\(P_n\)</span>.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>Los tres primeros picos son <span class="math inline">\(P_0=d\)</span>, <span class="math inline">\(P_1=d(1+q)\)</span> y <span class="math inline">\(P_2=d(1+q+q^2)\)</span>. Entre dosis queda <span class="math inline">\(qP_n\)</span> y la siguiente añade <span class="math inline">\(d\)</span>, así que <span class="math inline">\(P_{n+1}=qP_n+d\)</span>.</p>
 </div>
@@ -390,13 +395,13 @@ C(t_n^+)-C(t_n^-)=d, &amp; n=0,1,2,\ldots
 <p>La combinación de la EDO y los eventos discretos da lugar a una recurrencia:</p>
 <p><span id="eq-farmaco-recurrencia"><span class="math display">\[
 \boxed{P_{n+1}=qP_n+d,\qquad q=e^{-kT},\qquad P_0=d.}
-\tag{12.3}\]</span></span></p>
+\tag{13.3}\]</span></span></p>
 <p>La recurrencia permite resolver todo el sistema <strong>por tramos</strong>. Tras la dosis <span class="math inline">\(n\)</span>, la concentración parte de <span class="math inline">\(P_n\)</span> y decae exponencialmente hasta la siguiente:</p>
 <p><span id="eq-farmaco-tramos"><span class="math display">\[
 \boxed{C(t)=P_ne^{-k(t-nT)},\qquad nT\leq t&lt;(n+1)T.}
-\tag{12.4}\]</span></span></p>
+\tag{13.4}\]</span></span></p>
 <div id="exr-farmaco-discreto" class="theorem exercise" data-title="Resolver el sistema por tramos">
-<p><span class="theorem-title"><strong>Ejercicio 12.5</strong></span> Desarrollar <a href="#eq-farmaco-recurrencia" class="quarto-xref">Ecuación&nbsp;<span>12.3</span></a> para <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span> y <span class="math inline">\(P_3\)</span>. Obtener una fórmula para <span class="math inline">\(P_n\)</span> y sustituirla en <a href="#eq-farmaco-tramos" class="quarto-xref">Ecuación&nbsp;<span>12.4</span></a>. Comprobar que el valor justo antes de la siguiente dosis es <span class="math inline">\(qP_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.5</strong></span> Desarrollar <a href="#eq-farmaco-recurrencia" class="quarto-xref">Ecuación&nbsp;<span>13.3</span></a> para <span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span> y <span class="math inline">\(P_3\)</span>. Obtener una fórmula para <span class="math inline">\(P_n\)</span> y sustituirla en <a href="#eq-farmaco-tramos" class="quarto-xref">Ecuación&nbsp;<span>13.4</span></a>. Comprobar que el valor justo antes de la siguiente dosis es <span class="math inline">\(qP_n\)</span>.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>Los picos son <span class="math inline">\(P_1=d(1+q)\)</span>, <span class="math inline">\(P_2=d(1+q+q^2)\)</span> y <span class="math inline">\(P_3=d(1+q+q^2+q^3)\)</span>. La suma geométrica da</p>
 <p><span class="math display">\[
@@ -425,10 +430,10 @@ C(t)=d\frac{1-q^{n+1}}{1-q}\,e^{-k(t-nT)}.
 <p><span id="eq-farmaco-muestreo"><span class="math display">\[
 \int_{a-\varepsilon}^{a+\varepsilon}f(t)\,\delta(t-a)\,\mathrm dt=f(a),
 \qquad \varepsilon&gt;0.
-\tag{12.5}\]</span></span></p>
+\tag{13.5}\]</span></span></p>
 <p>En particular, su integral alrededor de <span class="math inline">\(a\)</span> vale <span class="math inline">\(1\)</span>. Multiplicarla por <span class="math inline">\(d\)</span> produce un impulso de área <span class="math inline">\(d\)</span>. Esta propiedad permite describir el efecto de una dosis sin asignar un valor imposible a la «altura» instantánea de la entrada.</p>
 <div id="exr-farmaco-delta" class="theorem exercise" data-title="Efecto de un impulso sobre la concentración">
-<p><span class="theorem-title"><strong>Ejercicio 12.6</strong></span> Determinar qué coeficiente debe multiplicar a <span class="math inline">\(\delta(t-t_n)\)</span> para producir un salto <span class="math inline">\(d\)</span> en <span class="math inline">\(t_n\)</span>. Comprobarlo integrando la ecuación alrededor de <span class="math inline">\(t_n\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.6</strong></span> Determinar qué coeficiente debe multiplicar a <span class="math inline">\(\delta(t-t_n)\)</span> para producir un salto <span class="math inline">\(d\)</span> en <span class="math inline">\(t_n\)</span>. Comprobarlo integrando la ecuación alrededor de <span class="math inline">\(t_n\)</span>.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>El coeficiente debe ser <span class="math inline">\(d\)</span>. Al integrar <span class="math inline">\(C'+kC=d\delta(t-t_n)\)</span> desde <span class="math inline">\(t_n-\varepsilon\)</span> hasta <span class="math inline">\(t_n+\varepsilon\)</span> y hacer <span class="math inline">\(\varepsilon\to0\)</span>, la integral de <span class="math inline">\(kC\)</span> desaparece y queda <span class="math inline">\(C(t_n^+)-C(t_n^-)=d\)</span>.</p>
 </div>
@@ -436,8 +441,8 @@ C(t)=d\frac{1-q^{n+1}}{1-q}\,e^{-k(t-nT)}.
 <p>Para una dosis en cada <span class="math inline">\(t_n=nT\)</span>, el modelo adopta la forma</p>
 <p><span id="eq-farmaco-deltas"><span class="math display">\[
 \boxed{C'(t)+kC(t)=d\sum_{n=0}^{\infty}\delta(t-nT),\qquad C(0^-)=0.}
-\tag{12.6}\]</span></span></p>
-<p>En efecto, al integrar <a href="#eq-farmaco-deltas" class="quarto-xref">Ecuación&nbsp;<span>12.6</span></a> alrededor de cualquier dosis se obtiene</p>
+\tag{13.6}\]</span></span></p>
+<p>En efecto, al integrar <a href="#eq-farmaco-deltas" class="quarto-xref">Ecuación&nbsp;<span>13.6</span></a> alrededor de cualquier dosis se obtiene</p>
 <p><span class="math display">\[
 C(t_n+\varepsilon)-C(t_n-\varepsilon)
 +k\int_{t_n-\varepsilon}^{t_n+\varepsilon}C(t)\,\mathrm dt=d.
@@ -445,7 +450,7 @@ C(t_n+\varepsilon)-C(t_n-\varepsilon)
 <p>Cuando <span class="math inline">\(\varepsilon\to0\)</span>, la integral ordinaria tiende a cero y se recupera <span class="math inline">\(C(t_n^+)-C(t_n^-)=d\)</span>. La ecuación con deltas expresa los eventos descritos anteriormente.</p>
 <section id="resolución-mediante-factor-integrante" class="level3">
 <h3 class="anchored" data-anchor-id="resolución-mediante-factor-integrante">Resolución mediante factor integrante</h3>
-<p>Como en una EDO lineal ordinaria, se multiplica <a href="#eq-farmaco-deltas" class="quarto-xref">Ecuación&nbsp;<span>12.6</span></a> por <span class="math inline">\(e^{kt}\)</span>. El miembro izquierdo se convierte en una derivada de producto:</p>
+<p>Como en una EDO lineal ordinaria, se multiplica <a href="#eq-farmaco-deltas" class="quarto-xref">Ecuación&nbsp;<span>13.6</span></a> por <span class="math inline">\(e^{kt}\)</span>. El miembro izquierdo se convierte en una derivada de producto:</p>
 <p><span class="math display">\[
 \frac{\mathrm d}{\mathrm dt}\bigl(e^{kt}C(t)\bigr)
 =d\sum_{n=0}^{\infty}e^{kt}\delta(t-nT).
@@ -457,35 +462,35 @@ e^{kt}C(t)=d\sum_{nT\leq t}e^{knT}.
 <p>Por tanto, después de aplicar las dosis correspondientes,</p>
 <p><span id="eq-farmaco-solucion"><span class="math display">\[
 \boxed{C(t)=d\sum_{nT\leq t}e^{-k(t-nT)}.}
-\tag{12.7}\]</span></span></p>
-<p>La fórmula suma la concentración residual de cada dosis. Solo contiene un número finito de términos para cualquier tiempo finito. En el instante de una dosis, <span class="math inline">\(C(t_n)\)</span> se interpreta como el valor <strong>después</strong> del salto. Al sustituir <span class="math inline">\(t=T^+\)</span> o <span class="math inline">\(t=2T^+\)</span>, se recuperan los picos calculados mediante <a href="#eq-farmaco-recurrencia" class="quarto-xref">Ecuación&nbsp;<span>12.3</span></a>.</p>
+\tag{13.7}\]</span></span></p>
+<p>La fórmula suma la concentración residual de cada dosis. Solo contiene un número finito de términos para cualquier tiempo finito. En el instante de una dosis, <span class="math inline">\(C(t_n)\)</span> se interpreta como el valor <strong>después</strong> del salto. Al sustituir <span class="math inline">\(t=T^+\)</span> o <span class="math inline">\(t=2T^+\)</span>, se recuperan los picos calculados mediante <a href="#eq-farmaco-recurrencia" class="quarto-xref">Ecuación&nbsp;<span>13.3</span></a>.</p>
 </section>
 </section>
 <section id="régimen-periódico-y-equilibrio-de-los-picos" class="level2">
 <h2 class="anchored" data-anchor-id="régimen-periódico-y-equilibrio-de-los-picos">4. Régimen periódico y equilibrio de los picos</h2>
 <p>Los picos crecen al principio, pero cada dosis antigua contribuye cada vez menos. Si la secuencia de picos llegara a estabilizarse en un valor <span class="math inline">\(P_*\)</span>, debería cumplir <span class="math inline">\(P_*=qP_*+d\)</span>.</p>
 <div id="exr-farmaco-equilibrio" class="theorem exercise" data-title="Del equilibrio discreto al ciclo periódico">
-<p><span class="theorem-title"><strong>Ejercicio 12.7</strong></span> Despejar <span class="math inline">\(P_*\)</span>. Determinar si la concentración permanece constante entre dosis cuando los picos se han estabilizado. Obtener el valor mínimo del ciclo, justo antes de la siguiente dosis.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.7</strong></span> Despejar <span class="math inline">\(P_*\)</span>. Determinar si la concentración permanece constante entre dosis cuando los picos se han estabilizado. Obtener el valor mínimo del ciclo, justo antes de la siguiente dosis.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span><span class="math inline">\(P_*=d/(1-q)\)</span>. Entre dosis la concentración desciende desde <span class="math inline">\(P_*\)</span> hasta <span class="math inline">\(qP_*\)</span>, así que no hay un equilibrio constante de <span class="math inline">\(C(t)\)</span>: hay un <strong>ciclo periódico</strong>. El equilibrio corresponde a la secuencia discreta de picos.</p>
 </div>
 </div>
-<p>En <a href="#exr-farmaco-discreto" class="quarto-xref">Ejercicio&nbsp;<span>12.5</span></a> se obtuvo <span class="math inline">\(P_n=d(1-q^{n+1})/(1-q)\)</span>. Como <span class="math inline">\(0&lt;q&lt;1\)</span>, el término <span class="math inline">\(q^{n+1}\)</span> tiende a cero:</p>
+<p>En <a href="#exr-farmaco-discreto" class="quarto-xref">Ejercicio&nbsp;<span>13.5</span></a> se obtuvo <span class="math inline">\(P_n=d(1-q^{n+1})/(1-q)\)</span>. Como <span class="math inline">\(0&lt;q&lt;1\)</span>, el término <span class="math inline">\(q^{n+1}\)</span> tiende a cero:</p>
 <p><span id="eq-farmaco-pico"><span class="math display">\[
 P_n=d\frac{1-q^{n+1}}{1-q}
 \quad\longrightarrow\quad
 \boxed{P_\infty=\frac{d}{1-q}}.
-\tag{12.8}\]</span></span></p>
+\tag{13.8}\]</span></span></p>
 <p>El <strong>valle</strong> justo antes de la siguiente dosis es <span class="math inline">\(qP_n\)</span>. En el ciclo límite,</p>
 <p><span id="eq-farmaco-valle"><span class="math display">\[
 \boxed{V_\infty=\frac{qd}{1-q}}.
-\tag{12.9}\]</span></span></p>
+\tag{13.9}\]</span></span></p>
 </section>
 <section id="zona-de-concentración-eficaz-y-segura" class="level2">
 <h2 class="anchored" data-anchor-id="zona-de-concentración-eficaz-y-segura">5. Zona de concentración eficaz y segura</h2>
 <p>Una concentración demasiado baja no produciría el efecto buscado y una demasiado alta podría resultar nociva. Sean <span class="math inline">\(C_{\min}\)</span> y <span class="math inline">\(C_{\max}\)</span> estos límites ilustrativos. Entre dosis la concentración solo disminuye; por ello, para estudiar el ciclo límite, basta comparar el <strong>valle</strong> con el límite inferior y el <strong>pico</strong> con el superior.</p>
 <div id="exr-farmaco-zona" class="theorem exercise" data-title="Intervalos admisibles entre dosis">
-<p><span class="theorem-title"><strong>Ejercicio 12.8</strong></span> Formular las condiciones sobre <span class="math inline">\(P_\infty\)</span> y <span class="math inline">\(V_\infty\)</span>. Con <span class="math inline">\(C_{\min}=L\)</span> y <span class="math inline">\(C_{\max}=H\)</span>, despejar el intervalo admisible de <span class="math inline">\(T\)</span> en función de <span class="math inline">\(k\)</span> y <span class="math inline">\(d\)</span>. Determinar qué condición debe cumplir <span class="math inline">\(d\)</span> para que exista algún intervalo admisible.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.8</strong></span> Formular las condiciones sobre <span class="math inline">\(P_\infty\)</span> y <span class="math inline">\(V_\infty\)</span>. Con <span class="math inline">\(C_{\min}=L\)</span> y <span class="math inline">\(C_{\max}=H\)</span>, despejar el intervalo admisible de <span class="math inline">\(T\)</span> en función de <span class="math inline">\(k\)</span> y <span class="math inline">\(d\)</span>. Determinar qué condición debe cumplir <span class="math inline">\(d\)</span> para que exista algún intervalo admisible.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>Entre dosis, la concentración solo decrece. Por ello basta exigir</p>
 <p><span class="math display">\[
@@ -504,7 +509,7 @@ C_{\min}\leq\frac{qd}{1-q},
 </div>
 <p>La permanencia del <strong>ciclo límite</strong> en la zona no garantiza que la trayectoria inicial también permanezca en ella. Con <span class="math inline">\(C(0^-)=0\)</span>, el primer pico es <span class="math inline">\(d\)</span> y el primer valle <span class="math inline">\(qd\)</span>; este puede estar por debajo de <span class="math inline">\(L\)</span> incluso cuando <span class="math inline">\(V_\infty\geq L\)</span>.</p>
 <div id="exr-farmaco-carga" class="theorem exercise" data-title="Permanencia en la zona desde la primera dosis">
-<p><span class="theorem-title"><strong>Ejercicio 12.9</strong></span> Mantener <span class="math inline">\(d\)</span> en las dosis posteriores y considerar un aumento inicial <span class="math inline">\(d_0\)</span> distinto. Determinar <span class="math inline">\(d_0\)</span> para que el primer ciclo coincida con el ciclo límite y establecer las condiciones para que toda la trayectoria posterior permanezca en <span class="math inline">\([L,H]\)</span>.</p>
+<p><span class="theorem-title"><strong>Ejercicio 13.9</strong></span> Mantener <span class="math inline">\(d\)</span> en las dosis posteriores y considerar un aumento inicial <span class="math inline">\(d_0\)</span> distinto. Determinar <span class="math inline">\(d_0\)</span> para que el primer ciclo coincida con el ciclo límite y establecer las condiciones para que toda la trayectoria posterior permanezca en <span class="math inline">\([L,H]\)</span>.</p>
 <div class="make-collapse proof solution" data-title="Solución">
 <p><span class="proof-title"><em>Solución</em>. </span>La elección <span class="math inline">\(d_0=P_\infty=d/(1-q)\)</span> hace que el primer valle sea <span class="math inline">\(qd_0=V_\infty\)</span> y que cada dosis posterior devuelva la concentración a <span class="math inline">\(P_\infty\)</span>. Toda la trayectoria desde <span class="math inline">\(0^+\)</span> quedará dentro de <span class="math inline">\([L,H]\)</span> si <span class="math inline">\(L\leq V_\infty\)</span> y <span class="math inline">\(P_\infty\leq H\)</span>. Se trata de una construcción del modelo, no de una recomendación de dosificación.</p>
 </div>
